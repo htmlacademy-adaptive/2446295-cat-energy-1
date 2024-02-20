@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Владимир Симонов](https://up.htmlacademy.ru/adaptive-individual/1/user/2446295).
-* Наставник: `Неизвестно`.
+* Наставник: `Андрей Изосимов`(https://htmlacademy.ru/profile/id605037).
 
 ---
 
