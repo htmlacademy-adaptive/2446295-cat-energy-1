@@ -1,92 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAT ENERGY</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAT ENERGY</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <header class="header">
-    <a class="header__logo" href="#">
-      <img class="header__logo-image" src="./img/main_logo.png" width="70" height="59" alt="Логотип CAT ENERGY">
-      <img class="header__logo-title-image" src="./img/logo_title.png" width="128" height="24" alt="Заголовок логотипа CAT ENERGY"></a>
-    </a>
-    <nav class="nav">
-      <button class="nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="nav__wrapper">
-        <ul class="nav__list">
-          <li class="nav__item nav__item--current">
-            <a class="nav__link" href="#">
-                Главная
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-                Каталог продукции
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-                Подбор программы
-            </a>
-          </li>
-        </ul>
+<body class="main-page">
+  <header class="main-page__header header">
+    <div class="header__wrapper">
+      <a class="header__logo" href="#">
+        <img class="header__logo-image" src="./img/logo_mobile.png" width="33" height="38" alt="Логотип CAT ENERGY">
+        <img class="header__logo-title-image" src="./img/logo_title_mobile.png" width="101" height="18" alt="Заголовок логотипа CAT ENERGY"></a>
+      </a>
+      <div class="burger">
+        <svg class="burger__button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
+          <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
+          <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
+        </svg>
       </div>
-    </nav>
+      <nav class="nav">
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="nav__wrapper">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--current">
+              <a class="nav__link" href="#">
+                  Главная
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="catalog.html">
+                  Каталог продукции
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                  Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
-  <main class="main">
-    <section class="promo">
+  <main class="main-page main-content">
+    <section class="main-content__promo promo">
+      <div class="promo__background"></div>
       <div class="promo__wrapper">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
+        <div class="promo__offer">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+        </div>
         <a class="promo__link">Подобрать программу</a>
       </div>
     </section>
-    <section class="programms">
-        <div class="programms__wrapper">
-            <div class="programms_card">
-                <div class="programms_icon">
-                    <span class="programms_image"></span>
-                    <h2 class="programms_title">похудение</h2>
-                </div>
-                <p class="programms_text">
-                    Ваш кот весит больше собаки и почти утратил способность
-                    лазить по деревьям? Пора на диету! Cat Energy Slim поможет
-                    вашему питомцу сбросить лишний вес.
-                </p>
-                <a class="programms_link" href="#">
-                    каталог slim
-                    <svg class="programms_link-icon" width="32" height="10" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                        <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="programms_card">
-                <div class="programms_icon">
-                    <span class="programms_image"></span>
-                    <h2 class="programms_title">набор массы</h2>
-                </div>
-                <p class="programms_text">
-                    Заработать авторитет среди дворовых котов и даже собак?
-                    Серия Cat Energy Pro поможет вашему коту нарастить
-                    необходимые мышцы!
-                </p>
-                <a class="programms_link" href="#">
-                    каталог pro
-                    <svg class="programms_link-icon" width="32" height="10" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                        <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
+    <section class="main-content__programmes programmes">
+      <h2 class="visually-hidden">Программы питания!</h2>
+      <div class="programmes__wrapper">
+          <div class="programmes__card">
+              <div class="programmes__icon">
+                  <span class="programmes__image"></span>
+                  <h2 class="programmes__title">похудение</h2>
+              </div>
+              <p class="programmes__text">
+                  Ваш кот весит больше собаки и почти утратил способность
+                  лазить по деревьям? Пора на диету! Cat Energy Slim поможет
+                  вашему питомцу сбросить лишний вес.
+              </p>
+              <hr class="programmes__line">
+              <a class="programmes__link" href="#">
+                  каталог slim
+                  <svg class="programmes__link-icon" width="32" height="10" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                      <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+                  </svg>
+              </a>
+          </div>
+          <div class="programmes__card">
+              <div class="programmes__icon">
+                  <span class="programmes__image"></span>
+                  <h2 class="programmes__title">набор массы</h2>
+              </div>
+              <p class="programmes__text">
+                  Заработать авторитет среди дворовых котов и даже собак?
+                  Серия Cat Energy Pro поможет вашему коту нарастить
+                  необходимые мышцы!
+              </p>
+              <hr class="programmes__line">
+              <a class="programmes__link" href="#">
+                  каталог pro
+                  <svg class="programmes__link-icon" width="32" height="10" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                      <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
     </section>
-    <section class="advantages">
+    <section class="main-content__advantages advantages">
       <div class="advantages__wrapper">
-        <h2 class="advantages__title">как это работает</h2>
+        <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
             <svg class="advantages__item-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,46 +165,43 @@
         </ul>
       </div>
     </section>
-    <section class="example">
+    <section class="main-content__example example">
       <div class="example__wrapper">
-        <h2 class="example__title">живой пример</h2>
-        <div class="example__facts">
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой
-            обычный корм на Cat Energy Slim. Отличный результат
-            без изнуряющих тренировок! При этом он не менял своих
-            привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="example__numbers">
-            <fieldset class="example__numbers-mass">
-              <span class="example__numbers-text">5 кг</span>
-              <legend class="example__numbers-legend">снижение веса</legend>
-            </fieldset>
-            <fieldset class="example__numbers-mass">
-              <span class="example__numbers-text">60 дней</span>
-              <legend class="example__numbers-legend">затрачено времени</legend>
-            </fieldset>
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__text">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой
+          обычный корм на Cat Energy Slim. Отличный результат
+          без изнуряющих тренировок! При этом он не менял своих
+          привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <dl class="example__numbers">
+          <div class="example__items">
+            <dt class="example__numbers-text">5 кг</dt>
+            <dd class="example__numbers-definition">снижение<br> веса</dd>
           </div>
-          <div class="example__result">
-            <span class="example__result-text">затраты на питание</span>
-            <span class="example__result-prise">15 000 руб.</span>
+          <div class="example__items">
+            <dt class="example__numbers-text">60 дней</dt>
+            <dd class="example__numbers-definition">затрачено времени</dd>
           </div>
+        </dl>
+        <div class="example__result">
+          <span class="example__result-text">Затраты на питание:</span>
+          <span class="example__result-prise">15 000 руб.</span>
         </div>
         <div class="example__before-after">
           <img class="example__before-after-image" src="./img/cat_before_after.png" alt="пример до после" width="560" height="512">
-          <div class="example__before-after-wrapper">
-            <svg class="example__before-after-wrapper-slider" width="40" height="512" viewBox="0 0 40 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" width="4" height="512" rx="2" fill="#666666"/>
-              <rect x="1" y="237" width="38" height="38" rx="19" fill="white"/>
-              <rect x="1" y="237" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
-              <path d="M16 247L8 256L16 265V247Z" fill="#666666"/>
-              <path d="M32 256L24 247V265L32 256Z" fill="#666666"/>
-            </svg>
-          </div>
+          <svg class="example__before-after-slider" width="40" height="512" viewBox="0 0 40 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" width="4" height="512" rx="2" fill="#666666"/>
+            <rect x="1" y="237" width="38" height="38" rx="19" fill="white"/>
+            <rect x="1" y="237" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+            <path d="M16 247L8 256L16 265V247Z" fill="#666666"/>
+            <path d="M32 256L24 247V265L32 256Z" fill="#666666"/>
+          </svg>
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="main-content__map map">
+      <h2 class="visually-hidden">Приглашаем к сотрудничеству диллеров!</h2>
       <div class="map__wrapper">
         <div class="map__cooperation">
           <h2 class="map__cooperation-text">приглашаем к сотрудничеству диллеров!</h2>
@@ -197,19 +210,21 @@
               ул. Большая
               Конюшенная, д. 19/8
             </address>
-            <address class="map__cooperation-city">
+            <address class="map__cooperation-address">
               Санкт-Петербург
             </address>
           </div>
         </div>
-        <div class="map__frame"></div>
+        <div class="map__frame">
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="main-page__footer footer">
     <div class="footer__wrapper-logo">
         <a class="footer__logo" href="#"><img class="footer__logo-title-image" src="./img/logo_title.png" width="128" height="24" alt="Логотип CAT ENERGY"></a>
     </div>
+    <hr class="footer__social-line">
     <ul class="footer__social-list">
       <li class="footer__social-item">
         <a class="footer__social-link" href="#">
@@ -236,10 +251,11 @@
         </a>
       </li>
     </ul>
-    <div class="footer__wrapper-academy">
-      <a class="footer__wrapper-academy-link" href="#">
-        <span class="footer__wrapper-academy-name">HTML Academy</span>
-        <svg class="footer__wrapper-academy-logo" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <hr class="footer__social-line">
+    <div class="footer__wrapper-academy academy">
+      <a class="academy-link" href="#">
+        <span class="academy-name">HTML Academy</span>
+        <svg class="academy-logo" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_112227_22)">
             <path d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="#666666"/>
           </g>

@@ -1,1 +1,11 @@
-// Начните писать стили здесь
+@import "./global/variables.scss";
+@import "./global/fonts.scss";
+@import "./global/base.scss";
+@import "./blocks/header.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/programmes.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/catalog.scss";
