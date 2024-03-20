@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+}
+
+.footer__wrapper-logo {
+  margin: auto;
+}
+
+.footer__social-line {
+  height: 1px;
+  width: 100%;
+  border: none;
+  background-color: $second-color;
+  margin: 20px 0;
+}
+
+.footer__social-list {
+  padding: 0;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.footer__social-item {
+  margin-right: 24px;
+}
+
+.footer__social-item:last-child {
+  margin-right: 0;
+}
+
+.academy-link {
+  display: flex;
+  margin: auto;
+  text-decoration: none;
+  color: $second-text-color;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  justify-content: space-between;
+}

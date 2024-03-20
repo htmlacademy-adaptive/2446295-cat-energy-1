@@ -1,0 +1,31 @@
+.advantages {
+  display: flex;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  color: $main-text-color;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+}
+
+.advantages__wrapper {
+  width: $mobile-content;
+  padding: 0 20px;
+}
+
+.advantages__list {
+  list-style: none;
+  padding: 0;
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  color: $second-text-color;
+}
+
+.advantages__item-icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}

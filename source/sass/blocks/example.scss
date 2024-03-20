@@ -1,0 +1,89 @@
+.example {
+  display: flex;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  color: $main-text-color;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  background-color: $second-color;
+}
+
+.example__wrapper {
+  width: $mobile-content;
+  padding: 25px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.example__title {
+  margin: 0 0 40px 0;
+}
+
+.example__text {
+  color: $second-text-color;
+  margin: 0 0 20px 0;
+}
+
+.example__numbers {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.example__items {
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.example__items::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  border: 1px solid #cdcdcd;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.example__numbers-text {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.example__numbers-definition {
+  margin: auto;
+  width: 77px;
+  font-size: 12px;
+  line-height: 100%;
+  color: $second-text-color;
+  background-color: $second-color;
+  position: relative;
+  z-index: 1;
+}
+
+.example__result {
+  margin: auto;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.example__before-after {
+  width: 280px;
+  height: 256px;
+  position: relative;
+}
+
+.example__before-after-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

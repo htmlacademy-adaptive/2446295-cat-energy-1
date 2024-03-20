@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  height: 60px;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.catalog-page__header {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.header__wrapper {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  width: $mobile-content;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 45%;
+}
+
+.nav {
+  display: none;
+}

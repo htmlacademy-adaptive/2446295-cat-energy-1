@@ -1,0 +1,59 @@
+.programmes {
+  display: flex;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  color: $main-text-color;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  position: relative;
+}
+
+.programmes__card {
+  background-color: $second-color;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.programmes__wrapper {
+  width: $mobile-content;
+}
+
+.programmes__icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.programmes__image {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 53px;
+  background-image: url("../../img/cat_back_programms_1.png");
+  background-size: cover;
+}
+
+.programmes__title {
+  margin-left: 70px;
+  text-transform: uppercase;
+}
+
+.programmes__text {
+  color: $second-text-color;
+  margin-bottom: 23px;
+}
+
+.programmes__line {
+  border: none;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.programmes__link {
+  text-decoration: none;
+  color: $main-text-color;
+  text-transform: uppercase;
+}
