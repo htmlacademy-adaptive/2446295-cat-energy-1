@@ -3,6 +3,7 @@
   width: $mobile;
   margin: 0 auto;
   padding: 0;
+  align-items: center;
   justify-content: center;
   color: $main-text-color;
   font-family: "Oswald-regular", sans-serif, "Arial";
@@ -12,7 +13,7 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 27px 0 40px 0;
+  margin: 27px 0 40px;
 }
 
 .catalog__list {
@@ -22,7 +23,6 @@
 
 .catalog__item {
   border-top: 1px solid #ebebeb;
-  border-width: 100%;
 }
 
 .catalog__item:last-child {
@@ -32,10 +32,17 @@
 .card__content {
   display: flex;
   justify-content: space-between;
+  height: 107px;
+  margin: auto;
+  padding: 0 18.5px;
 }
 
 .card__img-wrapper {
-  min-width: 140px;
+  width: 140px;
+}
+
+.card__img {
+
 }
 
 .card__description-list {
@@ -50,8 +57,9 @@
 .card__link {
   display: flex;
   text-decoration: none;
-  color: #000000;
-  background-color: #68b738;
   width: 100%;
+  justify-content: center;
+  height: 40px;
   align-items: center;
 }
+

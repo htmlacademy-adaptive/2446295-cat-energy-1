@@ -1,8 +1,7 @@
 .header {
   display: flex;
   height: 60px;
-  min-width: $mobile;
-  max-width: 400px;
+  width: $mobile;
   margin: 0 auto;
   padding: 0;
   align-items: center;
