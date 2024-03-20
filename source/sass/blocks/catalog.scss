@@ -46,3 +46,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.card__link {
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  background-color: #68b738;
+  width: 100%;
+  align-items: center;
+}

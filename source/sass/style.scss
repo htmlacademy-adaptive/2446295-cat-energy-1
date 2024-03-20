@@ -1,11 +1,20 @@
+//Глобальные стили
 @import "./global/variables.scss";
 @import "./global/fonts.scss";
 @import "./global/base.scss";
-@import "./blocks/header.scss";
+
+//Главная страница
 @import "./blocks/promo.scss";
 @import "./blocks/programmes.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/example.scss";
 @import "./blocks/map.scss";
+
+//Header
+@import "./blocks/header.scss";
+
+//Footer
 @import "./blocks/footer.scss";
+
+//Страница каталога
 @import "./blocks/catalog.scss";
