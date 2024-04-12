@@ -1,0 +1,121 @@
+.form-request {
+  display: flex;
+  flex-direction: column;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0 20px 32px 20px;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+//Стили формы по коту
+.eat-programme__list {
+  padding: 0 20px;
+  list-style: none;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0 0 25px 0;
+}
+
+.eat-programme__item {
+  margin-bottom: 14px;
+}
+
+.eat-programme__item:last-child {
+  margin-bottom: 24px;
+}
+
+.eat-programme__item-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eat-programme__item-text {
+  display: block;
+  margin: auto 13px auto 0;
+  flex: 0 0 auto;
+}
+
+.eat-programme__item-form {
+  height: 45px;
+  width: 100%;
+  padding: 0 50px 0 15px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+//Стилит при взаимодействии для Input
+
+.eat-programme__item-label:hover .eat-programme__item-form {
+  border: 1px solid #cdcdcd;
+}
+
+.eat-programme__item-label:focus .eat-programme__item-form {
+  border: 2px solid #444444;
+}
+
+.eat-programme__item-label:invalid .eat-programme__item-form {
+  border: 2px solid #ff8282;
+}
+
+//Стили формы с радиокнопками по программе питания
+.eat-programme__radio-list {
+  list-style: none;
+  padding: 0 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 25px;
+}
+
+.eat-programme__radio-item {
+  margin-bottom: 13px;
+  height: 30px;
+}
+
+.eat-programme__radio-item:last-child {
+  margin-bottom: 19px;
+}
+
+.eat-programme__radio-label {
+  display: flex;
+  align-items: center;
+}
+
+.eat-programme__radio-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-right: 19px;
+}
+
+.type-programme[type="radio"]:checked + .eat-programme__radio-input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #68b738;
+  background-image: url("../../img/radiobutton_active.svg");
+}
+
+//Стилит при взаимодействии для Radio button
+.eat-programme__radio-input:hover circle { //короче это какая то шляпа, надо разобраться...либо вложенность либо так...хрень как ни крути
+  stroke: #bababa;
+}
+
+.eat-programme__radio-label:disabled {
+  opacity: 0.3;
+}

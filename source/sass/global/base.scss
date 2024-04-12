@@ -30,3 +30,9 @@ img {
   color: $button-text-color;
   background-color: $main-color;
 }
+
+/* Уберает стрелки у поля ввода "number" в */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}

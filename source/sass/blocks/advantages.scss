@@ -22,10 +22,12 @@
   position: relative;
   display: flex;
   color: $second-text-color;
+  align-items: center;
 }
 
 .advantages__item-icon {
   width: 80px;
   height: 80px;
   margin-right: 20px;
+  flex-shrink: 0;
 }

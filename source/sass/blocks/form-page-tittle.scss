@@ -1,0 +1,28 @@
+.form-page__tittle-case {
+  display: flex;
+  flex-direction: column;
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  color: $main-text-color;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+}
+
+.form-page__tittle-wrapper {
+  padding-left: 20px;
+}
+
+.form-page-tittle {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 27px 0 37px 0;
+}
+
+.form-page__second-text {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
