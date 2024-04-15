@@ -7,35 +7,44 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="catalog-page">
-  <header class="catalog-page__header header">
+  <header class="main-page__header header">
     <div class="header__wrapper">
-      <a class="header__logo" href="#">
-        <img class="header__logo-image" src="./img/logo_mobile.png" width="33" height="38" alt="Логотип CAT ENERGY">
-        <img class="header__logo-title-image" src="./img/logo_title_mobile.png" width="101" height="18" alt="Заголовок логотипа CAT ENERGY"></a>
+      <a class="header__logo-mobile" href="index.html">
+        <img class="header__logo-mobile-image" src="./img/logo_mobile.png" width="33" height="38" alt="Логотип CAT ENERGY">
+        <img class="header__logo-mobile-title-image" src="./img/logo_title_mobile.png" width="101" height="18" alt="Заголовок логотипа CAT ENERGY"></a>
+      </a>
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-tablet-image" src="./img/logo_tablet.png" width="60" height="50" alt="Логотип CAT ENERGY">
+        <img class="header__logo-image" src="./img/main_logo.png" width="60" height="50" alt="Логотип CAT ENERGY">
+        <img class="header__logo-title-image" src="./img/logo_title.png" width="101" height="18" alt="Заголовок логотипа CAT ENERGY"></a>
       </a>
       <div class="burger">
+        <span class="visually-hidden">Открыть меню</span>
         <svg class="burger__button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="3" x2="24" y2="3" stroke="black" stroke-width="2"/>
           <line y1="11" x2="24" y2="11" stroke="black" stroke-width="2"/>
           <line y1="19" x2="24" y2="19" stroke="black" stroke-width="2"/>
         </svg>
       </div>
-      <nav class="nav"class="nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
+      <!-- для открытия меню нужно поменять класс на nav--open -->
+      <nav class="nav nav--close">
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
         <div class="nav__wrapper">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">
+            <li class="nav__item ">
+              <a class="nav__link" href="index.html">
                   Главная
               </a>
             </li>
             <li class="nav__item nav__item--current">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="catalog.html">
                   Каталог продукции
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="form.html">
                   Подбор программы
               </a>
             </li>

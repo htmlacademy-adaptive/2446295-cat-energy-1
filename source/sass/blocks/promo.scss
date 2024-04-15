@@ -23,11 +23,10 @@
 }
 
 .promo__wrapper {
-  padding-top: 27px;
+  padding: 27px 20px 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: $mobile-content;
   align-items: center;
 }
 
@@ -50,12 +49,12 @@
 }
 
 .promo__title {
-  margin: auto;
-  width: 249px;
-  font-family: "Oswald-medium", sans-serif, "Arial";
+  width: 250px;
+  font-family: "Oswald-regular", sans-serif, "Arial";
   font-size: 36px;
   line-height: 36px;
-  margin-bottom: 30px;
+  font-weight: 400;
+  margin: 0 auto 30px auto;
 }
 
 .promo__text {
@@ -67,7 +66,7 @@
 
 .promo__link {
   display: flex;
-  width: $mobile-content;
+  width: 280px;
   height: 40px;
   padding: 0;
   font-size: 16px;
