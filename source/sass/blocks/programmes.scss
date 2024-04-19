@@ -7,22 +7,26 @@
   color: $main-text-color;
   font-family: "Oswald-regular", sans-serif, "Arial";
   position: relative;
+  outline: 2px solid #333333;
 }
 
 .programmes__card {
   background-color: $second-color;
   margin-bottom: 20px;
   padding: 20px;
+  outline: 2px solid #f58383;
 }
 
 .programmes__wrapper {
   width: $mobile-content;
+  outline: 2px solid #f42e2e;
 }
 
 .programmes__icon {
   display: flex;
   align-items: center;
   position: relative;
+  outline: 2px solid #f4c92e;
 }
 
 .programmes__image {
@@ -32,6 +36,7 @@
   height: 53px;
   background-image: url("../../img/cat_back_programms_1.png");
   background-size: cover;
+  outline: 2px solid #66f42e;
 }
 
 .programmes__title {

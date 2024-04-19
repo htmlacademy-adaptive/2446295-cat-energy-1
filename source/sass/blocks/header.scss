@@ -32,6 +32,14 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
 }
 
 // .header__logo-wrapper {
@@ -198,7 +206,6 @@
     }
   }
 }
-
 
 .nav__item:last-child {
   border-bottom: 1px solid #e6e6e6;
