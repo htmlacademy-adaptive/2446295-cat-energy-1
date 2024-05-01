@@ -1,28 +1,95 @@
 .example {
   display: flex;
   width: $mobile;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   padding: 0;
   justify-content: center;
   color: $main-text-color;
   font-family: "Oswald-regular", sans-serif, "Arial";
   background-color: $second-color;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+    background-color: inherit;
+    margin-top: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    margin-top: 110px;
+    border: none;
+  }
 }
 
 .example__wrapper {
-  width: $mobile-content;
-  padding: 25px 0 40px 0;
+  padding: 25px 20px 40px 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 45px 30px 100px 30px;
+
+    &::before {
+      content: "";
+      background-color: #eaeaea;
+      left: 0;
+      bottom: 0;
+      width: $tablet;
+      height: 462px;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 30px 75px 30px;
+
+    &::before {
+      content: "";
+      background-color: #eaeaea;
+      left: -110px;
+      bottom: 0;
+      width: 1440px;
+      height: 462px;
+      position: absolute;
+      z-index: -1;
+    }
+  }
 }
 
 .example__title {
-  margin: 0 0 40px 0;
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__text {
   color: $second-text-color;
-  margin: 0 0 20px 0;
+  margin: 40px 0 20px 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    margin: 60px 0 55px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 145px 0 70px 0;
+    width: 432px;
+  }
 }
 
 .example__numbers {
@@ -31,12 +98,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+
+  @media (min-width: $tablet) {
+    gap: 43px;
+    grid-template-columns: 1fr;
+    display: flex;
+  }
 }
 
 .example__items {
   text-align: center;
   box-sizing: border-box;
   position: relative;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+  }
 }
 
 .example__items::before {
@@ -48,36 +125,102 @@
   height: 100%;
   width: 100%;
   z-index: 1;
+
+  @media (min-width: $tablet) {
+    height: 70px;
+  }
 }
+
+.example__result-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    justify-content: inherit;
+  }
+}
+
 
 .example__numbers-text {
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 11px;
+  }
 }
 
 .example__numbers-definition {
   margin: auto;
   width: 77px;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 12px;
+  font-weight: 400;
   color: $second-text-color;
   background-color: $second-color;
   position: relative;
   z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 135px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: #eaeaea;
+  }
 }
 
 .example__result {
   margin: auto;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 auto auto;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+  }
 }
 
 .example__before-after {
   width: 280px;
   height: 256px;
   position: relative;
+
+  @media (min-width: $tablet) {
+    margin: 100px auto 0 auto;
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    right: 0;
+    top: -100px;
+  }
 }
 
 .example__before-after-slider {
