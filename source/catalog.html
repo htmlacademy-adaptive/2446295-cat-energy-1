@@ -62,9 +62,11 @@
             <div class="card">
               <div class="card__wrapper">
                 <div class="card__content">
-                  <div class="card__img-wrapper">
-                    <img class="card__img" src="./img/chicken_pro_500.png" width="68" height="86" alt="CAT ENERGY PRO CHICKEN 500 г."/>
-                  </div>
+                  <picture class="card__img-wrapper">
+                    <source type="image/webp" srcset="./img/chicken_pro_500@1x.webp 1x, ./img/chicken_pro_500@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/chicken_pro_500_tablet@1x.webp 1x, ./img/chicken_pro_500_tablet@2x.webp 2x">
+                    <img src="./img/chicken_pro_500.png" alt="CAT ENERGY PRO CHICKEN 500 г."/>
+                  </picture>
                   <div class="card__info">
                     <h3 class="card__title">CAT ENERGY PRO 500 Г</h3>
                     <ul class="card__description-list">
@@ -85,16 +87,17 @@
                 </div>
                 <a class="card__link main-button-color" href="form.html">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
             <div class="card">
               <div class="card__wrapper">
                 <div class="card__content">
-                  <div class="card__img-wrapper">
-                    <img class="card__img" src="./img/chicken_pro_1000.png" width="84" height="100" alt="CAT ENERGY PRO CHICKEN 1000 г."/>
-                  </div>
+                  <picture class="card__img-wrapper">
+                    <source type="image/webp" srcset="./img/chicken_pro_1000@1x.webp 1x, ./img/chicken_pro_1000@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/chicken_pro_1000_tablet@1x.webp 1x, ./img/chicken_pro_1000_tablet@2x.webp 2x">
+                    <img src="./img/chicken_pro_1000.png" alt="CAT ENERGY PRO CHICKEN 1000 г."/>
+                  </picture>
                   <div class="card__info">
                     <h3 class="card__title">CAT ENERGY PRO 1000 Г</h3>
                     <ul class="card__description-list">
@@ -115,7 +118,6 @@
                 </div>
                 <a class="card__link main-button-color" href="form.html">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
@@ -145,7 +147,6 @@
                 </div>
                 <a class="card__link main-button-color" href="#">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
@@ -175,7 +176,6 @@
                 </div>
                 <a class="card__link main-button-color" href="#">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
@@ -205,7 +205,6 @@
                 </div>
                 <a class="card__link main-button-color" href="#">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
@@ -235,7 +234,6 @@
                 </div>
                 <a class="card__link main-button-color" href="#">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item">
@@ -265,19 +263,13 @@
                 </div>
                 <a class="card__link main-button-color" href="#">Заказать</a>
               </div>
-              <div class="card__rectangle"></div>
             </div>
           </li>
           <li class="catalog__item ">
             <div class="promo-card">
               <div class="promo-card__wrapper">
                 <div class="promo-card__content">
-                  <div class="promo-card__img-wrapper">
-                    <svg class="promo-card__img" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="15" x2="15" y2="30" stroke="#D3D3D3" stroke-width="2"/>
-                      <line x1="30" y1="15" y2="15" stroke="#D3D3D3" stroke-width="2"/>
-                    </svg>
-                  </div>
+                  <div class="promo-card__img-wrapper"></div>
                   <div class="promo-card__info">
                     <h3 class="promo-card__title">Показать еще 100500 товаров</h3>
                     <span class="promo-card__text">На самом деле вкусов гораздо больше!</span>
@@ -285,7 +277,6 @@
                 </div>
                 <a class="promo-card__link" href="#">Показать все</a>
               </div>
-              <div class="promo-card__rectangle"></div>
             </div>
           </li>
         </ul>
