@@ -10,22 +10,66 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    margin-top: 65px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 0;
+  }
 }
 
 //Стили формы по коту
+
+.eat-programme__wrapper {
+  @media (min-width: $tablet) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    margin: 0;
+    gap: 80px;
+  }
+}
+
 .eat-programme__list {
   padding: 0 20px;
   list-style: none;
   border-bottom: 1px solid #d9d9d9;
   margin: 0 0 25px 0;
+
+  @media (min-width: $tablet) {
+    border: none;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 570px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .eat-programme__item {
   margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .eat-programme__item:last-child {
   margin-bottom: 24px;
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .eat-programme__item-label {
@@ -52,6 +96,15 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 52px;
+  }
 }
 
 //Стилит при взаимодействии для Input
@@ -71,18 +124,38 @@
 //Стили формы с радиокнопками по программе питания
 .eat-programme__radio-list {
   list-style: none;
-  padding: 0 20px;
-  border-bottom: 1px solid #d9d9d9;
+  padding: 0 20px 20px 20px;
   margin-bottom: 25px;
+  border-bottom: 1px solid #d9d9d9;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    border: 1px solid #d9d9d9;
+    margin: 0 20px 0 20px;
+    padding: 23px 25px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 570px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .eat-programme__radio-item {
   margin-bottom: 13px;
   height: 30px;
+
+  @media (min-width: $desktop) {
+    margin-left: 30px;
+  }
 }
 
 .eat-programme__radio-item:last-child {
-  margin-bottom: 19px;
+  margin-bottom: 0;
 }
 
 .eat-programme__radio-label {

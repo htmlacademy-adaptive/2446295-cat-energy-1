@@ -2,21 +2,47 @@
   padding: 0 20px;
   margin: 0 0 25px 0;
   border: none;
+
+  @media (min-width: $tablet) {
+    padding: 75px 60px 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 80px 0 0 0;
+    padding: 75px 0 0 0;
+  }
 }
 
 .fieldset-legend {
   font-size: 24px;
   line-height: 26px;
+  font-weight: 400;
   text-transform: none;
   color: #000000;
   padding: 0;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
 }
 
 .contacts__input-list {
   list-style: none;
   padding: 0;
   position: relative;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .contacts-item:last-child {
@@ -99,6 +125,15 @@
   font-size: 16px;
   line-height: 18px;
   border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet) {
+    width: 613px;
+    height: 175px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1190px;
+  }
 }
 
 //Стилит при взаимодействии для textarea
@@ -112,13 +147,29 @@
 }
 
 .extras__fieldset {
+  margin-top: 40px;
   margin-bottom: 35px;
+
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+  }
 }
 
 .extras__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 70px;
+  }
 }
 
 .extras__item {
@@ -172,6 +223,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    column-gap: 75px;
+    margin-bottom: 80px;
+  }
 }
 
 .actions__submit-form {
@@ -188,6 +251,11 @@
   font-size: 16px;
   line-height: 18px;
   margin: 0 20px 21px 20px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .actions__second-text {
