@@ -1,0 +1,38 @@
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.main-page {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-page {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.main-button-color {
+  color: $button-text-color;
+  background-color: $main-color;
+}
+
+/* Уберает стрелки у поля ввода "number" в */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
