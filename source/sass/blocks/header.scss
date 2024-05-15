@@ -1,0 +1,48 @@
+.header {
+  min-height: 65px;
+  width: $mobile;
+  position: relative;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    min-height: 50px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    min-height: 59px;
+    margin-top: 55px;
+  }
+}
+
+.catalog-page__header {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.header__wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.header__logo {
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+

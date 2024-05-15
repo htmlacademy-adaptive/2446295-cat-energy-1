@@ -1,0 +1,21 @@
+// тут мы заполняем и добавляем переменные, базовый цвет, цвет фона, то что часто используем в разных местах
+//Основные цвета сайта
+$main-color: #68b738;
+$second-color: #eaeaea;
+//Основные цвета текста
+$main-text-color: #000000;
+$second-text-color: #444444;
+//цвет текста кнопок и меню
+$button-text-color: #ffffff;
+$button-active-text-color: rgb(255, 255, 255, 0.3);
+$button-hover-color: #5eaa2f;
+$button-active-color: #5eaa2f;
+$button-alternative-hover-color: #ebebeb;
+$button-alternative-active-color: #ebebeb;
+
+//Viewpoets
+$mobile-content: 279px;
+$mobile: 320px;
+$mobile-width-only: 767px;
+$tablet: 768px;
+$desktop: 1220px;
