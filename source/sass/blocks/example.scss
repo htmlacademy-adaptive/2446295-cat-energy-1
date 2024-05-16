@@ -1,0 +1,261 @@
+.example {
+  display: flex;
+  width: 100%;
+  margin: 50px auto 0 auto;
+  padding: 0;
+  justify-content: center;
+  color: $main-text-color;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  background: linear-gradient(to bottom, $second-color 100%, $second-color 0%);
+
+  @media (min-width: $tablet) {
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+    margin-top: 45px;
+    background: linear-gradient(to bottom, #ffffff 58%, $second-color 42%);
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 110px;
+    border: none;
+    background: linear-gradient(to bottom, #ffffff 23%, $second-color 10%);
+  }
+}
+
+.example__wrapper {
+  width: $mobile;
+  padding: 25px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 45px 30px 100px 30px;
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 30px 75px 30px;
+  }
+}
+
+.example__title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.example__text {
+  color: $second-text-color;
+  margin: 40px 0 20px 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    margin: 60px 0 55px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 145px 0 70px 0;
+    width: 432px;
+  }
+}
+
+.example__numbers {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @media (min-width: $tablet) {
+    gap: 43px;
+    grid-template-columns: 1fr;
+    display: flex;
+  }
+}
+
+.example__items {
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+  }
+}
+
+.example__items::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  border: 1px solid #cdcdcd;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    height: 70px;
+  }
+}
+
+.example__result-wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    justify-content: inherit;
+    margin-bottom: 0;
+  }
+}
+
+
+.example__numbers-text {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 11px;
+  }
+}
+
+.example__numbers-definition {
+  margin: auto;
+  width: 77px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $second-text-color;
+  background-color: $second-color;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 135px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: #eaeaea;
+  }
+}
+
+.example__result {
+  margin: auto;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 auto auto;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+  }
+}
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__image-wrapper {
+  width: 280px;
+  position: relative;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.slider__fat-cat {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  height: 256px;
+  object-fit: cover;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
+}
+
+.slider__slim-cat {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: 256px;
+  object-fit: cover;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
+}
+
+.slider__image {
+  max-width: inherit;
+  width: 280px;
+  height: auto;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+  }
+}
+
+// это должна быть кнопка
+.example__before-after-slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  height: 100%;
+
+  &:hover rect {
+    fill: $main-color;
+  }
+
+  &:active svg {
+    fill: $button-active-color;
+    opacity: 0.6;
+  }
+}
