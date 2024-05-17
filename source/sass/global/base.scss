@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // outline: 2px solid #777777;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.index-body {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-bady {
+  margin: 0;
+  padding: 0;
+}
+
+.form-body {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.button-alternative {
+  &:hover {
+    background-color: $button-alternative-hover-color;
+  }
+
+  &:active {
+    color: $button-alternative-active-color;
+  }
+}
+
+.button {
+  color: $button-text-color;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    color: $button-active-text-color;
+  }
+}
+
+.logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+/* Уберает стрелки у поля ввода "number" в */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}

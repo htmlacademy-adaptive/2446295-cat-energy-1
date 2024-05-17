@@ -1,0 +1,268 @@
+.form-fieldset {
+  padding: 0 20px;
+  margin: 0 0 25px 0;
+  border: none;
+
+  @media (min-width: $tablet) {
+    padding: 75px 60px 0 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 80px 0 0 0;
+    padding: 75px 0 0 0;
+  }
+}
+
+.fieldset-legend {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: none;
+  color: #000000;
+  padding: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+}
+
+.contacts__input-list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact__input-email-item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/email_stroke.svg");
+  top: 13px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.contact__input-phone-item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/phone_stroke.svg");
+  height: 20px;
+  width: 20px;
+  top: 13px;
+  right: 10px;
+}
+
+.contacts-item {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.contact__input-label {
+  display: flex;
+  align-items: center;
+}
+
+.contact__input-text {
+  display: block;
+  margin: auto 13px auto 0;
+  flex: 0 0 auto;
+}
+
+.contact__input {
+  height: 45px;
+  width: 100%;
+  padding: 0 30px 0 15px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+//Стилит при взаимодействии для Input
+
+.contact__input-label:hover .contact__input {
+  border: 1px solid #cdcdcd;
+}
+
+.contact__input-labell:focus .contact__input {
+  border: 2px solid #444444;
+}
+
+.contact__input-label:invalid .contact__input {
+  border: 2px solid #ff8282;
+}
+
+.comment__textarea {
+  width: 250px;
+  height: 120px;
+  resize: none;
+  padding: 15px;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet) {
+    width: 613px;
+    height: 175px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1190px;
+  }
+}
+
+//Стилит при взаимодействии для textarea
+
+.comment__textarea:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.comment__textarea:focus {
+  border: 2px solid #444444;
+}
+
+.extras__fieldset {
+  margin-top: 40px;
+  margin-bottom: 35px;
+
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+  }
+}
+
+.extras__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 70px;
+  }
+}
+
+.extras__item {
+  margin-bottom: 13px;
+  height: 30px;
+}
+
+.extras__item:last-child {
+  margin-bottom: 0;
+}
+
+.extras__label {
+  display: flex;
+  align-items: center;
+}
+
+.extras__checkbox {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  cursor: pointer;
+  margin-right: 19px;
+}
+
+//Стилит при взаимодействии для checkbox
+
+.extras__label:hover .extras__checkbox {
+  border: 1px solid #bababa;
+}
+
+.extras__label:disabled .extras__checkbox {
+  opacity: 0.3;
+}
+
+.type-extras[type="checkbox"]:checked + .extras__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/checkbox_tick.svg");
+}
+
+.actions__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    column-gap: 75px;
+    margin-bottom: 80px;
+  }
+}
+
+.actions__submit-form {
+  display: flex;
+  text-decoration: none;
+  width: 280px;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 20px 21px 20px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.actions__second-text {
+  text-transform: none;
+  font-family: "Lato", sans-serif, "Arial";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $main-text-color;
+}

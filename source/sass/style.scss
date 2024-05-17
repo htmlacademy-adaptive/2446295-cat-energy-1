@@ -1,1 +1,27 @@
-// Начните писать стили здесь
+//Глобальные стили
+@import "./global/variables.scss";
+@import "./global/fonts.scss";
+@import "./global/base.scss";
+
+//Главная страница
+@import "./blocks/promo.scss";
+@import "./blocks/programmes.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/map.scss";
+
+//Header
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+
+//Footer
+@import "./blocks/footer.scss";
+
+//Страница каталога
+@import "./blocks/catalog.scss";
+@import "./blocks/related-products.scss";
+
+//Страница формы
+@import "./blocks/form-page-tittle.scss";
+@import "./blocks/eat-programme-form.scss";
+@import "./blocks/contacts-form.scss";
