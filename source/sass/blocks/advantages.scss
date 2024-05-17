@@ -1,19 +1,10 @@
 .advantages {
   display: flex;
-  width: $mobile;
-  margin: 40px auto 0 auto;
+  margin: 2px auto 0 auto;
   padding: 0;
   justify-content: center;
   color: $main-text-color;
   font-family: "Oswald-regular", sans-serif, "Arial";
-
-  @media (min-width: $tablet) {
-    width: $tablet;
-  }
-
-  @media (min-width: $desktop) {
-    width: $desktop;
-  }
 }
 
 .advantages__title {
@@ -30,12 +21,17 @@
 }
 
 .advantages__wrapper {
-  width: $mobile-content;
+  width: $mobile;
   padding: 0 20px;
 
   @media (min-width: $tablet) {
+    margin-top: 13px;
     padding: 0 30px;
-    width: 100%;
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
@@ -48,18 +44,22 @@
   list-style: none;
 
   @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 32px;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     counter-reset: tablet-counter;
-    gap: 37px;
+    row-gap: 37px;
+    column-gap: 60px;
   }
 
   @media (min-width: $desktop) {
     gap: 80px;
   }
 }
-// ну и как эту хероту всю по перфекту, чтоб его, пикселю, сделать?
+
 .advantages__item {
   position: relative;
   display: flex;
@@ -79,11 +79,18 @@
       line-height: 280px;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -18px;
       color: #f2f2f2;
       counter-increment: tablet-counter;
       z-index: -1;
       align-items: start;
+    }
+
+    &:first-child {
+      &::before {
+        content: counter(tablet-counter);
+        right: 5px;
+      }
     }
   }
 }
@@ -108,6 +115,7 @@
   line-height: 18px;
 
   @media (min-width: $tablet) {
+    width: 245px;
     margin-top: 30px;
     font-size: 16px;
     line-height: 24px;

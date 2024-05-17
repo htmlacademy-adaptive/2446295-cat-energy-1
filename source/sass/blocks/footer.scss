@@ -8,13 +8,13 @@
   flex-direction: column;
   width: $mobile;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 38px 0;
   font-family: "Oswald-regular", sans-serif, "Arial";
 
   @media (min-width: $tablet) {
     width: $tablet;
     flex-direction: row;
-    padding: 60px 0;
+    padding: 55px 0 55px 0;
   }
 
   @media (min-width: $desktop) {
@@ -24,10 +24,9 @@
 }
 
 .footer__wrapper-logo {
-  width: 240px;
   text-align: center;
-  margin: 0 auto 20px auto;
-  padding: 0 20px 20px 20px;
+  margin: 0 20px 20px 20px;
+  padding: 0 0 14px 0;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
@@ -35,7 +34,7 @@
     border: none;
     padding: 0;
     display: block;
-    margin: auto 0 auto 30px;
+    margin: 5px 0 0 31px;
   }
 }
 
@@ -45,6 +44,11 @@
   margin: auto;
   justify-content: space-around;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    margin: 7px auto 0 160px;
+    align-items: center;
+  }
 }
 
 .footer__social-item {
@@ -57,7 +61,7 @@
 
 .academy-link {
   display: flex;
-  margin: 20px 20px 0 20px;
+  margin: 14px 20px 0 20px;
   padding: 20px 0 0 0;
   text-decoration: none;
   color: $second-text-color;
@@ -85,7 +89,6 @@
     opacity: 0.3;
   }
 }
-
 
 .academy-logo {
   @media (min-width: $tablet) {
