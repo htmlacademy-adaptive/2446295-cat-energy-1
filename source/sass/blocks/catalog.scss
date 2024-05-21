@@ -33,12 +33,16 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 27px 0 40px 20px;
+  margin: 27px 0 40px 18px;
 
   @media (min-width: $tablet) {
-    margin: 65px auto 85px 0;
+    margin: 61px auto 84px 0;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 70px;
   }
 }
 
@@ -56,7 +60,7 @@
 
 .catalog__item {
   border-top: 1px solid #ebebeb;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding: 0 18.5px;
 
   @media (min-width: $tablet) {
@@ -66,21 +70,11 @@
     margin-bottom: 60px;
     position: relative;
     box-sizing: border-box;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: #f2f2f2;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 430px;
-      z-index: -1;
-    }
+    background: linear-gradient(to bottom, $white-color 16%, $background-color 16%);
   }
 
   @media (min-width: $desktop) {
-    width: 250px;
+    width: 245px;
   }
 }
 
@@ -92,12 +86,8 @@
     border: 2px solid #f2f2f2;
     box-sizing: border-box;
     width: 324px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background: none;
-    }
+    background: none;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop) {
@@ -113,14 +103,14 @@
   justify-content: space-between;
   min-height: 107px;
   margin: auto;
-  padding: 20px 0 17px 0;
+  padding: 18px 0 16px 0;
 
   @media (min-width: $tablet) {
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    padding: 0 0 40px 0;
-    height: 400px;
+    padding: 10px 0 33px 0;
+    min-height: 400px;
   }
 }
 
@@ -132,13 +122,18 @@
 
   @media (min-width: $tablet) {
     width: 200px;
-    height: 210px;
-    margin-bottom: 40px;
-    margin-top: 30px;
+    min-height: 210px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
   }
 }
 
 .card__info {
+  min-height: 110px;
+
   @media (min-width: $tablet) {
     width: 100%;
   }
@@ -151,8 +146,8 @@
   color: #222222;
   display: block;
   width: 76px;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 3px 0 15px 0;
+
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -173,8 +168,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
   }
+
+  // @media (min-width: $desktop) {
+  // }
 }
 
 .card__description-item {
@@ -193,6 +191,10 @@
     padding: 0 0 4px 0;
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $desktop) {
+    padding: 4px 0 5px 0;
+  }
 }
 
 .card__link {
@@ -210,7 +212,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .promo-card__wrapper {
@@ -230,10 +232,11 @@
 }
 
 .promo-card__content {
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet) {
     margin-bottom: 80px;
+    padding-inline: 40px;
   }
 
   @media (min-width: $desktop) {
@@ -249,7 +252,6 @@
   color: #111111;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 8px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -266,6 +268,7 @@
   color: $second-text-color;
 
   @media (min-width: $tablet) {
+    display: block;
     font-size: 16px;
     line-height: 18px;
   }

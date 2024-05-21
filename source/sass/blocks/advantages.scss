@@ -32,6 +32,8 @@
 
   @media (min-width: $desktop) {
     width: $desktop;
+    margin-top: 39px;
+    padding: 0;
   }
 }
 
@@ -56,6 +58,7 @@
   }
 
   @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 80px;
   }
 }

@@ -61,7 +61,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    top: -115px;
+    top: -118px;
 
     @media (min-resolution: 2dppx) {
       background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -126,7 +126,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 110px;
+    padding-top: 106px;
   }
 }
 
@@ -155,8 +155,8 @@
   }
 
   @media (min-width: $desktop) {
-    right: -237px;
-    bottom: 45px;
+    right: -231px;
+    bottom: 51px;
   }
 }
 
@@ -183,6 +183,7 @@
   }
 
   @media (min-width: $desktop) {
+    margin-top: 52px;
     margin-left: 80px;
   }
 }
