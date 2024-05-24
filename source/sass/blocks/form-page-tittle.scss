@@ -1,7 +1,6 @@
 .form-page__tittle-case {
   display: flex;
   flex-direction: column;
-  width: $mobile;
   margin: 0 auto;
   padding: 0 20px 0 20px;
   color: $main-text-color;
@@ -18,13 +17,16 @@
 
 .form-page__tittle-wrapper {
   padding-left: 20px;
+  width: $mobile;
+  margin-inline: auto;
 
   @media (min-width: $tablet) {
-    padding-left: 20px;
+    width: $tablet;
   }
 
   @media (min-width: $desktop) {
     padding: 0;
+    width: $desktop;
   }
 }
 

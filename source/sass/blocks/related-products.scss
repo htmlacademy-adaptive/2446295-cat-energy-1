@@ -15,6 +15,7 @@
 
   @media (min-width: $desktop) {
     width: $desktop;
+    margin-top: 15px;
     margin-bottom: 87px;
   }
 }
@@ -85,7 +86,7 @@
 
 
   @media (min-width: $desktop) {
-    margin: 0 0 80px 0;
+    margin: 0 0 78px 0;
     font-size: 36px;
     line-height: 36px;
     position: relative;
@@ -100,7 +101,7 @@
 }
 
 .related-products__list {
-  margin: 0 0 38px 0;
+  margin: 0 0 34px 0;
   padding: 0;
   list-style: none;
 
@@ -116,7 +117,7 @@
 
 .related-products__item {
   border-top: 1px solid #ebebeb;
-  padding: 14px 0 17px;
+  padding: 14px 0 18px;
 
   @media (min-width: $tablet) {
     padding: 26px 40px 27px 40px;
@@ -128,7 +129,7 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr 244px;
-    padding: 15px 0;
+    padding: 15px 0 16px 0;
   }
 }
 
@@ -177,7 +178,8 @@
     display: grid;
     grid-template-columns: 1fr 50px;
     margin-bottom: 0;
-    margin-right: 40px;
+    margin-top: 3px;
+    margin-right: 31px;
   }
 }
 
@@ -226,26 +228,40 @@
   display: flex;
   width: 280px;
   height: 290px;
-  background: $main-color url("../../img/catalog_gift_background_img.png") no-repeat;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img.jpg") no-repeat;
   background-position: center top;
   position: relative;
   margin-bottom: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/catalog_gift_background_img@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 288px;
+  }
 
   @media (min-width: $tablet) {
     margin: 70px 0 75px 0;
     width: 100%;
     height: 200px;
-    background: url("../../img/catalog_gift_background_img_tablet.png") no-repeat;
+    background: url("../../img/catalog_gift_background_img_tablet.jpg") no-repeat;
     background-position: left center;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../../img/catalog_gift_background_img_tablet@2x.jpg") no-repeat;
+      background-size: 100% auto;
+    }
   }
 
   @media (min-width: $desktop) {
     width: 245px;
     height: 288px;
     margin: 0;
-    background: $main-color url("../../img/catalog_gift_background_img.png") no-repeat;
-    background-position: center top;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img.jpg") no-repeat;
+    background-position: right top;
   }
 }
 
@@ -263,8 +279,8 @@
   }
 
   @media (min-width: $desktop) {
-    left: 80px;
-    top: 56px;
+    left: 85px;
+    top: 57px;
   }
 }
 
@@ -287,6 +303,6 @@
 
   @media (min-width: $desktop) {
     text-align: center;
-    margin: auto 42px 57px 42px;
+    margin: auto 42px 40px 42px;
   }
 }

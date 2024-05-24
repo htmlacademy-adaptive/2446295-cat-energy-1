@@ -3,7 +3,7 @@
   flex-direction: column;
   width: $mobile;
   margin: 0 auto;
-  padding: 0 20px 32px 20px;
+  padding: 0 0 32px 0;
   font-family: "Oswald-regular", sans-serif, "Arial";
   text-transform: uppercase;
   color: $second-text-color;
@@ -42,7 +42,7 @@
   padding: 0 20px;
   list-style: none;
   border-bottom: 1px solid #d9d9d9;
-  margin: 0 0 25px 0;
+  margin: 0 0 21px 0;
 
   @media (min-width: $tablet) {
     border: none;
@@ -168,7 +168,7 @@
   align-items: center;
   position: relative;
   cursor: pointer;
-  margin-right: 19px;
+  margin-right: 15px;
 }
 
 .type-programme[type="radio"]:checked + .eat-programme__radio-input::after {
