@@ -13,9 +13,10 @@
 
   @media (min-width: $tablet) {
     width: $tablet;
-    margin-top: 65px;
+    margin-top: 66px;
     font-size: 20px;
     line-height: 30px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
@@ -47,6 +48,7 @@
   @media (min-width: $tablet) {
     border: none;
     margin-bottom: 72px;
+    padding: 0 30px;
   }
 
   @media (min-width: $desktop) {
@@ -100,6 +102,8 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+    height: 52px;
+    padding: 0 50px 0 20px;
   }
 
   @media (min-width: $desktop) {
@@ -131,8 +135,8 @@
 
   @media (min-width: $tablet) {
     border: 1px solid #d9d9d9;
-    margin: 0 20px 0 20px;
-    padding: 23px 25px;
+    margin: 0 30px 0 30px;
+    padding: 22px 25px 26px;
   }
 
   @media (min-width: $desktop) {
@@ -149,8 +153,12 @@
   margin-bottom: 13px;
   height: 30px;
 
+  @media (min-width: $tablet) {
+    height: 40px;
+  }
+
   @media (min-width: $desktop) {
-    margin-left: 30px;
+    margin-left: 27px;
   }
 }
 
@@ -165,13 +173,24 @@
 
 .eat-programme__radio-input {
   display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $border-check-radio-color;
   align-items: center;
   position: relative;
   cursor: pointer;
-  margin-right: 15px;
+  margin: 0 15px 0 0;
+  appearance: none;
+
+  @media (min-width: $tablet) {
+    width: 41px;
+    height: 41px;
+    margin-right: 20px;
+  }
 }
 
-.type-programme[type="radio"]:checked + .eat-programme__radio-input::after {
+.eat-programme__radio-input[type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -181,12 +200,16 @@
   height: 13px;
   border-radius: 50%;
   background-color: #68b738;
-  background-image: url("../../img/radiobutton_active.svg");
+
+  @media (min-width: $tablet) {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 //Стилит при взаимодействии для Radio button
-.eat-programme__radio-input:hover circle { //короче это какая то шляпа, надо разобраться...либо вложенность либо так...хрень как ни крути
-  stroke: #bababa;
+.eat-programme__radio-input:hover { //короче это какая то шляпа, надо разобраться...либо вложенность либо так...хрень как ни крути
+  border-color: #bababa;
 }
 
 .eat-programme__radio-label:disabled {
