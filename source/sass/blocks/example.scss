@@ -1,7 +1,7 @@
 .example {
   display: flex;
   width: 100%;
-  margin: 50px auto 0 auto;
+  margin: 53px auto 0 auto;
   padding: 0;
   justify-content: center;
   color: $main-text-color;
@@ -247,19 +247,49 @@
 }
 
 // это должна быть кнопка
-.example__before-after-slider {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(0);
+.slider__button {
+  width: 4px;
   height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background-color: $button-slider-color;
+  border-radius: 2px;
 
-  &:hover rect {
-    fill: $main-color;
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("../../img/slider.svg");
   }
+}
 
-  &:active svg {
-    fill: $button-active-color;
-    opacity: 0.6;
-  }
+.slider__button:hover,
+.slider__button:focus {
+  outline: none;
+  background-color: $button-slider-hover-color;
+}
+
+.slider__button:hover::before,
+.slider__button:focus::before {
+  background: url("../../img/slider_hover.svg");
+}
+
+.slider__button:active {
+  outline: none;
+  background-color: $button-slider-active-color;
+  opacity: 0.7;
+}
+
+.slider__button:active::before {
+  background: url("../../img/slider_active.svg");
 }

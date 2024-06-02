@@ -219,33 +219,59 @@
 
 .promo-card__wrapper {
   width: 100%;
-}
+  position: relative;
 
-.promo-card__img-wrapper {
-  padding: 40px 0;
-  background-image: url("../../img/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    background-color: $second-background-color;
+    height: 30px;
+    right: 50%;
+    top: 25px;
+    transform: translateX(50%);
 
-  @media (min-width: $tablet) {
-    padding: 80px 0;
-    background-image: url("../../img/plus_tablet.svg");
+    @media (min-width: $tablet) {
+      content: "";
+      height: 60px;
+      right: 49%;
+      top: 51px;
+      transform: translateX(17%);
+    }
   }
 
-  @media (min-width: $desktop) {
-    padding: 150px 0 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    background-color: $second-background-color;
+    height: 2px;
+    right: 50%;
+    top: 39px;
+    transform: translateX(50%);
+
+    @media (min-width: $tablet) {
+      content: "";
+      width: 60px;
+      top: 80px;
+    }
   }
 }
 
 .promo-card__content {
-  margin-bottom: 19px;
+  margin-top: 79px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet) {
+    margin-top: 161px;
     margin-bottom: 80px;
     padding-inline: 40px;
   }
 
   @media (min-width: $desktop) {
+    margin-top: 149px;
     margin-bottom: 90px;
     padding: 0;
   }
