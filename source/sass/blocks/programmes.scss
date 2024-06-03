@@ -39,6 +39,7 @@
   background-color: $second-color;
   margin-bottom: 20px;
   padding: 30px 20px 13px 20px;
+  position: relative;
 
   @media (min-width: $tablet) {
     padding: 77px 0 57px 52px;
@@ -51,68 +52,62 @@
   }
 }
 
-.programmes__icon {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.programmes__image {
+.programmes__card--fit::after {
+  content: "";
   position: absolute;
-  display: block;
-  background-size: cover;
-
-  @media (min-width: $tablet) {
-    left: inherit;
-    top: 0;
-  }
-}
-
-.programmes__image-fit {
   width: 50px;
   height: 53px;
-  background-image: url("../../img/cat_back_programms_fit.png");
+  left: 19px;
+  top: 21px;
+  background-image: url("../../img/cat_back_programms_fit.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet) {
-    top: 4px;
-    right: 63px;
     width: 200px;
     height: 211px;
-    background-image: url("../../img/cat_back_programms_fit_tablet.png");
+    left: auto;
+    right: 63px;
+    top: 81px;
   }
 
   @media (min-width: $desktop) {
-    top: -36px;
-    right: inherit;
-    left: 0;
     width: 100px;
     height: 106px;
+    right: auto;
+    left: 52px;
+    top: 42px;
   }
 }
 
-.programmes__image-mass {
+.programmes__card--mass::after {
+  content: "";
+  position: absolute;
   width: 67px;
   height: 50px;
-  left: -9px;
-  background-image: url("../../img/puma_back_programms_mass.png");
+  left: 11px;
+  top: 25px;
+  background-image: url("../../img/cat_back_programms_mass.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet) {
-    top: 14px;
-    right: 29px;
-    left: inherit;
     width: 268px;
     height: 200px;
-    background-image: url("../../img/puma_back_programms_mass_tablet.png");
+    left: auto;
+    right: 29px;
+    top: 91px;
   }
 
   @media (min-width: $desktop) {
-    top: -30px;
-    right: inherit;
-    left: -17px;
     width: 134px;
     height: 100px;
+    right: auto;
+    left: 34px;
+    top: 47px;
   }
 }
+
 
 .programmes__title {
   margin: 0 0 0 70px;
@@ -178,7 +173,7 @@
     background-size: cover;
     top: 5px;
     margin-left: 15px;
-    transition: all 0.3s ease;
+    transition: all ease;
 
     @media (min-width: $tablet) {
       top: 9px;
