@@ -15,7 +15,7 @@
 
   @media (min-width: $desktop) {
     width: $desktop;
-    margin-top: 82px;
+    margin-top: 78px;
   }
 }
 
@@ -38,16 +38,16 @@
 .programmes__card {
   background-color: $second-color;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 30px 20px 13px 20px;
 
   @media (min-width: $tablet) {
-    padding: 77px 0 50px 50px;
+    padding: 77px 0 57px 52px;
     margin-bottom: 30px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
-    padding: 77px 60px 55px 50px;
+    padding: 77px 60px 58px 52px;
   }
 }
 
@@ -74,7 +74,8 @@
   background-image: url("../../img/cat_back_programms_fit.png");
 
   @media (min-width: $tablet) {
-    right: 60px;
+    top: 4px;
+    right: 63px;
     width: 200px;
     height: 211px;
     background-image: url("../../img/cat_back_programms_fit_tablet.png");
@@ -96,7 +97,8 @@
   background-image: url("../../img/puma_back_programms_mass.png");
 
   @media (min-width: $tablet) {
-    right: 30px;
+    top: 14px;
+    right: 29px;
     left: inherit;
     width: 268px;
     height: 200px;
@@ -104,7 +106,7 @@
   }
 
   @media (min-width: $desktop) {
-    top: -34px;
+    top: -30px;
     right: inherit;
     left: -17px;
     width: 134px;
@@ -126,13 +128,14 @@
   }
 
   @media (min-width: $desktop) {
-    margin-left: 160px;
+    margin-left: 162px;
   }
 }
 
 .programmes__text {
   color: $second-text-color;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 11px;
   padding-bottom: 23px;
   font-family: "Lato", "arial", sans-serif;
   font-size: 14px;
@@ -147,13 +150,13 @@
     margin-top: 25px;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
     margin-top: 73px;
-    margin-bottom: 33px;
+    margin-bottom: 28px;
   }
 }
 
@@ -173,9 +176,14 @@
     background-image: url("../../img/arrow_icon.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    top: 7px;
-    margin-left: 25px;
+    top: 5px;
+    margin-left: 15px;
     transition: all 0.3s ease;
+
+    @media (min-width: $tablet) {
+      top: 9px;
+      margin-left: 26px;
+    }
   }
 
   &:hover {

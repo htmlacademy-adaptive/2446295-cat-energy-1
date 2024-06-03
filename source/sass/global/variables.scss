@@ -1,10 +1,14 @@
 // тут мы заполняем и добавляем переменные, базовый цвет, цвет фона, то что часто используем в разных местах
 //Основные цвета сайта
 $main-color: #68b738;
+$white-color: #ffffff;
 $second-color: #eaeaea;
+$background-color: #f2f2f2;
+
 //Основные цвета текста
 $main-text-color: #000000;
 $second-text-color: #444444;
+
 //цвет текста кнопок и меню
 $button-text-color: #ffffff;
 $button-active-text-color: rgb(255, 255, 255, 0.3);
@@ -12,6 +16,14 @@ $button-hover-color: #5eaa2f;
 $button-active-color: #5eaa2f;
 $button-alternative-hover-color: #ebebeb;
 $button-alternative-active-color: #ebebeb;
+
+//цвета для бордера
+$border-check-radio-color: #cdcdcd;
+$border-check-radio-hover-color: #bababa;
+$border-input-color: #e7e7e7;
+$border-input-hover-color: #cdcdcd;
+$border-input-focus-color: #444444;
+$border-input-error-color: #ff8282;
 
 //Viewpoets
 $mobile-content: 279px;

@@ -1,7 +1,6 @@
 .form-page__tittle-case {
   display: flex;
   flex-direction: column;
-  width: $mobile;
   margin: 0 auto;
   padding: 0 20px 0 20px;
   color: $main-text-color;
@@ -13,18 +12,22 @@
 
   @media (min-width: $desktop) {
     width: $desktop;
+    padding: 0;
   }
 }
 
 .form-page__tittle-wrapper {
   padding-left: 20px;
+  width: $mobile;
+  margin-inline: auto;
 
   @media (min-width: $tablet) {
-    padding-left: 20px;
+    width: $tablet;
   }
 
   @media (min-width: $desktop) {
     padding: 0;
+    width: $desktop;
   }
 }
 
@@ -35,7 +38,7 @@
   margin: 27px 0 37px 0;
 
   @media (min-width: $tablet) {
-    margin: 65px auto 0 40px;
+    margin: 70px auto 0 30px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -53,7 +56,7 @@
   margin: 0 0 40px 0;
 
   @media (min-width: $tablet) {
-    margin: 55px 0 0 40px;
+    margin: 55px 0 0 30px;
     font-size: 20px;
     line-height: 30px;
   }

@@ -21,6 +21,10 @@
     border-bottom: none;
     margin: 0;
   }
+
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
 }
 
 .burger {
@@ -123,7 +127,7 @@
     flex-direction: row;
     font-size: 18px;
     line-height: 24px;
-    gap: 33px;
+    gap: 32px;
   }
 
   @media (min-width: $desktop) {
@@ -149,6 +153,10 @@
     border-top: none;
     padding: 15px 0;
   }
+
+  @media (min-width: $tablet) {
+    margin-inline: 1px;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -157,9 +165,9 @@
       content: "";
       position: absolute;
       width: 100%;
-      bottom: 3px;
+      bottom: 7px;
       right: 0;
-      border-bottom: 3px solid $main-color;
+      border-bottom: 2px solid $main-color;
     }
   }
 }
@@ -168,7 +176,8 @@
   .nav__item--current {
     .main-page__nav-link::after {
       content: "";
-      border-bottom: 3px solid #ffffff;
+      bottom: 8px;
+      border-bottom: 2px solid #ffffff;
     }
   }
 }
@@ -210,10 +219,6 @@
 
   @media (min-width: $tablet) {
     display: flex;
-  }
-
-  @media (min-width: $desktop) {
-    max-width: 50%;
   }
 }
 
