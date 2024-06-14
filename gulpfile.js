@@ -74,6 +74,16 @@ const svg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+const sprite = () => {
+  return gulp.src(['source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
 //Copy
 
 const copy = (done) => {
@@ -127,6 +137,7 @@ export const build = gulp.series (
     html,
     scripts,
     svg,
+    sprite,
     imageToWebp
   ),
 );
@@ -142,6 +153,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     imageToWebp
   ),
   gulp.series(

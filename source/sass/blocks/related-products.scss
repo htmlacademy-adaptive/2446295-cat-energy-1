@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   color: $main-text-color;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
 
   @media (min-width: $tablet) {
     width: $tablet;

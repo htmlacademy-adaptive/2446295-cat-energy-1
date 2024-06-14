@@ -1,6 +1,8 @@
 .footer {
   width: 100%;
   background-color: #ededed;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer__wrapper {
@@ -9,7 +11,7 @@
   width: $mobile;
   margin: 0 auto;
   padding: 38px 0;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
 
   @media (min-width: $tablet) {
     width: $tablet;
@@ -49,6 +51,7 @@
   margin: auto;
   justify-content: space-around;
   list-style: none;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet) {
     margin: 7px auto 0 160px;

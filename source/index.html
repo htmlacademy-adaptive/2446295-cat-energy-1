@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,16 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body class="index-body">
-  <header class="main-page__header header">
+  <header class="index-body__header header">
     <div class="header__wrapper">
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo" href="index.html">
         <picture>
           <source media="(min-width: 1220px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
           <source media="(min-width: 768px)" srcset="./img/logo/logo_header_tablet.svg" width="174" height="50">
           <img src="./img/logo/logo_header_mobile.svg" width="190" height="38" loading="lazy" alt="Логотип CAT ENERGY">
         </picture>
       </a>
-      <!-- для открытия меню в мобильной версии нужно поменять класс на nav--open -->
+      <!-- для скрытия меню нужно заменить nav--open на nav--close и наоборот -->
       <nav class="nav nav--close nav--nojs">
         <button class="burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -52,7 +52,7 @@
     </div>
   </header>
 
-  <main class="main-page main-content">
+  <main class="index-body__main-content main-content base_page">
     <section class="main-content__promo promo">
       <div class="promo__wrapper">
         <div class="promo__offer">
@@ -194,8 +194,7 @@
             <address class="map__cooperation-address">
               ул. Большая
               Конюшенная, д. 19/8
-              <span class="spacer">&nbsp;</span><br>
-              Санкт-Петербург
+              <span class="city">Санкт-Петербург</span>
             </address>
           </div>
         </div>
@@ -208,7 +207,12 @@
   <footer class="main-page__footer footer">
     <div class="footer__wrapper">
       <div class="footer__wrapper-logo">
-          <a class="footer__logo logo" href="#"><img class="footer__logo-title-image" src="./img/logo/logo_footer.svg" width="128" height="24" alt="Логотип CAT ENERGY"></a>
+        <a class="footer__logo logo" href="#">
+          <h3 class="visually-hidden">Cat Energy</h3>
+          <svg class="footer__logo" width="128" height="24">
+            <use href="img/sprite.svg#logo_footer"></use>
+          </svg>
+        </a>
       </div>
       <ul class="footer__social-list">
         <li class="footer__social-item">

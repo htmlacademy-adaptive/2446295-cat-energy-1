@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 0 20px 0 20px;
   color: $main-text-color;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
 
   @media (min-width: $tablet) {
     width: $tablet;
@@ -38,12 +38,13 @@
   margin: 27px 0 37px 0;
 
   @media (min-width: $tablet) {
-    margin: 70px auto 0 30px;
+    margin: 60px auto 0 30px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: $desktop) {
+    margin-top: 70px;
     margin-left: 0;
   }
 }
