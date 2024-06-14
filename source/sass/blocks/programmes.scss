@@ -5,7 +5,7 @@
   padding: 0;
   justify-content: center;
   color: $main-text-color;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
   position: relative;
 
   @media (min-width: $tablet) {
@@ -132,7 +132,7 @@
   margin-top: 30px;
   margin-bottom: 11px;
   padding-bottom: 23px;
-  font-family: "Lato", "arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;

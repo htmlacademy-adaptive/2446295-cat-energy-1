@@ -1,6 +1,6 @@
 .map {
   display: flex;
-  width: $mobile;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   align-items: center;
@@ -109,9 +109,10 @@
   line-height: 20px;
   font-style: normal;
   color: $second-text-color;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet) {
-    display: inline-block;
     text-align: right;
     font-size: 16px;
   }
@@ -121,29 +122,21 @@
   }
 }
 
-.spacer {
-  display: none;
-  height: 5px;
-
+.city {
   @media (min-width: $tablet) {
-    display: inline-block;
-  }
-
-  @media (min-width: $desktop) {
-    height: 37px;
+    margin-top: 20px;
   }
 }
 
 .map__iframe {
   position: absolute;
-  width: 320px;
+  width: 99vw;
+  left: 50%;
+  transform: translateX(-50%);
   height: 360px;
   border: none;
 
   @media (min-width: $tablet) {
-    width: 99vw;
-    left: 50%;
-    transform: translateX(-50%);
     height: 400px;
   }
 }

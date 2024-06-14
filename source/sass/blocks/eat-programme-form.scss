@@ -4,7 +4,7 @@
   width: $mobile;
   margin: 0 auto;
   padding: 0 0 32px 0;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
   text-transform: uppercase;
   color: $second-text-color;
   font-weight: 400;
@@ -23,6 +23,10 @@
     width: $desktop;
     padding: 0;
   }
+}
+
+.eat-programme {
+ border: none;
 }
 
 //Стили формы по коту
@@ -92,7 +96,7 @@
   padding: 0 50px 0 15px;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
-  font-family: "Oswald-regular", sans-serif, "Arial";
+  font-family: "Oswald-regular", "Arial", sans-serif;
   text-transform: uppercase;
   color: $second-text-color;
   font-weight: 400;

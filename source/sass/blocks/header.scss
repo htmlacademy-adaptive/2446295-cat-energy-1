@@ -3,6 +3,8 @@
   width: $mobile;
   position: relative;
   margin: 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
 
   @media (min-width: $tablet) {
     width: $tablet;
@@ -17,7 +19,7 @@
   }
 }
 
-.catalog-page__header {
+.catalog-body__header {
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
