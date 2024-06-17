@@ -10,9 +10,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: grid;
     margin: 0;
     gap: 80px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -52,14 +53,16 @@
 }
 
 .eat-programme__item-label {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: max-content minmax(50%, auto);
 }
 
 .eat-programme__item-text {
-  display: block;
+  display: inline-block;
   margin: auto 13px auto 0;
+  white-space: break-spaces;
+  max-width: 250px;
   flex: 0 0 auto;
 }
 
@@ -146,6 +149,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 27px;
+    height: fit-content;
   }
 }
 
@@ -174,6 +178,7 @@
     width: 41px;
     height: 41px;
     margin-right: 20px;
+    flex: 0 0 auto;
   }
 }
 

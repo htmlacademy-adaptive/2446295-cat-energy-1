@@ -9,13 +9,62 @@
   @media (min-width: $tablet) {
     width: $tablet;
     min-height: 50px;
-    margin-top: 25px;
+    padding-top: 25px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop;
     min-height: 59px;
-    margin-top: 54px;
+    padding-top: 54px;
+  }
+}
+
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 303px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/promo-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/promo-background-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet) {
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 49.5vw;
+    overflow: auto;
+    left: 50%;
+    min-height: 694px;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/promo-background-desktop.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo-background-desktop@2x.jpg");
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 

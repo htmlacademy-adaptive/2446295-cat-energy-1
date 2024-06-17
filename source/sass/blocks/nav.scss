@@ -116,6 +116,7 @@
     line-height: 30px;
     row-gap: 0;
     padding-top: 2px;
+    justify-content: flex-end;
   }
 }
 
@@ -137,6 +138,7 @@
 
   @media (min-width: $tablet) {
     margin-inline: 1px;
+    max-width: 200px;
   }
 }
 
@@ -175,6 +177,7 @@
   text-decoration: none;
   color: $main-text-color;
   cursor: pointer;
+  text-align: center;
 }
 
 @media (min-width: $desktop-width) {
