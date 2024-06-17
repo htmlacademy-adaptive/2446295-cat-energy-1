@@ -1,87 +1,87 @@
 .comment__fieldset {
+  &::before {
+    content: "";
+    width: 180px;
+    left: -20px;
+    top: -65px;
+  }
+
+  &::after {
+    content: "";
+    transform: translateX(-50%);
+    top: -48.5px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 55px;
+    padding-top: 51px;
+
     &::before {
       content: "";
-      width: 180px;
-      left: -20px;
+      width: 262px;
+      left: 30px;
       top: -65px;
     }
-  
+
     &::after {
       content: "";
-      transform: translateX(-50%);
-      top: -48.5px;
-    }
-  
-    @media (min-width: $tablet) {
-      margin-top: 55px;
-      padding-top: 51px;
-  
-      &::before {
-        content: "";
-        width: 262px;
-        left: 30px;
-        top: -65px;
-      }
-  
-      &::after {
-        content: "";
-        top: -50.5px;
-      }
-    }
-  
-    @media (min-width: $desktop-width) {
-      margin-top: 68px;
-      padding-top: 41px;
-  
-      &::before {
-        content: "";
-        left: -40px;
-      }
-  
-      &::after {
-        content: "";
-        top: -51px;
-      }
+      top: -50.5px;
     }
   }
-  
-  .comment__legend {
-    margin-bottom: 37px;
-  }
-  
-  .comment__textarea {
-    width: 281px;
-    height: 150px;
-    resize: none;
-    padding: 15px;
-    font-family: "Oswald", "Arial", sans-serif;
-    text-transform: uppercase;
-    color: $second-text-color;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    border: 1px solid $border-input-color;
-  
-    @media (min-width: $tablet) {
-      width: 628px;
-      height: 175px;
-      font-size: 20px;
-      line-height: 30px;
-      padding: 10px 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 68px;
+    padding-top: 41px;
+
+    &::before {
+      content: "";
+      left: -40px;
     }
-  
-    @media (min-width: $desktop-width) {
-      width: 1220px;
-      padding: 8px 20px;
+
+    &::after {
+      content: "";
+      top: -51px;
     }
   }
-  
-  //Стилит при взаимодействии для textarea
-  
-  .comment__textarea:hover {
-    border: 1px solid $border-input-hover-color;
+}
+
+.comment__legend {
+  margin-bottom: 37px;
+}
+
+.comment__textarea {
+  width: 281px;
+  height: 150px;
+  resize: none;
+  padding: 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid $border-input-color;
+
+  @media (min-width: $tablet) {
+    width: 628px;
+    height: 175px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 20px;
   }
-  
-  .comment__textarea:focus {
-    outline: 2px solid $border-input-focus-color;
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 8px 20px;
   }
+}
+
+//Стилит при взаимодействии для textarea
+
+.comment__textarea:hover {
+  border: 1px solid $border-input-hover-color;
+}
+
+.comment__textarea:focus {
+  outline: 2px solid $border-input-focus-color;
+}
