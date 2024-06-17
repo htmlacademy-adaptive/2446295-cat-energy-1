@@ -1,0 +1,12 @@
+.button {
+  color: $button-text-color;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    color: $button-active-text-color;
+  }
+}

@@ -17,66 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-.page {
-  height: 100%;
-}
-
 img {
   max-width: 100%;
   height: auto;
-}
-
-.base_page {
-  flex-grow: 1;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.button-alternative {
-  &:hover {
-    background-color: $button-alternative-hover-color;
-  }
-
-  &:active {
-    color: $button-alternative-active-color;
-  }
-}
-
-.button {
-  color: $button-text-color;
-  background-color: $main-color;
-
-  &:hover {
-    background-color: $button-hover-color;
-  }
-
-  &:active {
-    color: $button-active-text-color;
-  }
-}
-
-.logo {
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-}
-
-/* Уберает стрелки у поля ввода "number" в */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  appearance: none;
-  -moz-appearance: textfield;
 }

@@ -1,0 +1,10 @@
+.icon {
+  &:hover path {
+    fill: $main-color;
+  }
+
+  &:active path {
+    fill: $main-color;
+    opacity: 0.3;
+  }
+}

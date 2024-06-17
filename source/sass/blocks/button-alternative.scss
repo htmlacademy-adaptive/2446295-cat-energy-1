@@ -1,0 +1,9 @@
+.button-alternative {
+  &:hover {
+    background-color: $button-alternative-hover-color;
+  }
+
+  &:active {
+    background-color: $button-alternative-active-color;
+  }
+}

@@ -1,0 +1,120 @@
+.extras__fieldset {
+  margin-top: 14px;
+  margin-bottom: 33px;
+
+  &::before {
+    content: "";
+    width: 180px;
+  }
+
+  &::after {
+    content: "";
+    transform: translateX(-50%);
+    top: -44px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 51px;
+    padding-top: 57px;
+    margin-bottom: 49px;
+
+    &::before {
+      content: "";
+      width: 292px;
+      top: -30px;
+    }
+
+    &::after {
+      content: "";
+      top: -14px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 65px;
+    margin-bottom: 56px;
+  }
+}
+
+.extras__legend {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.extras__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 29px 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+  }
+}
+
+.extras__item {
+  margin-bottom: 13px;
+  height: fit-content;
+}
+
+.extras__item:last-child {
+  margin-bottom: 0;
+}
+
+.extras__label {
+  display: flex;
+  align-items: center;
+}
+
+.extras__checkbox {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-check-radio-color;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 15px;
+  appearance: none;
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+  }
+}
+
+//Стилит при взаимодействии для checkbox
+
+.extras__label:hover .extras__checkbox {
+  border: 1px solid $border-check-radio-hover-color;
+}
+
+.extras__checkbox:disabled + .extras__title {
+  opacity: 0.3;
+}
+
+.extras__checkbox[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/checkbox_tick.svg");
+  background-repeat: no-repeat;
+}

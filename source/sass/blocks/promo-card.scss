@@ -1,0 +1,138 @@
+.promo-card {
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    border: none;
+    margin: 0;
+    margin-top: 80px;
+    width: 324px;
+    background: none;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-top: 82px;
+  }
+}
+
+.promo-card__wrapper {
+  width: 100%;
+  position: relative;
+  padding: 0 18.5px 22px 18.5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    background-color: $second-background-color;
+    height: 30px;
+    right: 50%;
+    top: 25px;
+    transform: translateX(50%);
+
+    @media (min-width: $tablet) {
+      content: "";
+      height: 60px;
+      right: 49%;
+      top: 51px;
+      transform: translateX(17%);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    background-color: $second-background-color;
+    height: 2px;
+    right: 50%;
+    top: 39px;
+    transform: translateX(50%);
+
+    @media (min-width: $tablet) {
+      content: "";
+      width: 60px;
+      top: 80px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+    padding: 0 35px 40px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-inline: 37px;
+  }
+}
+
+.promo-card__content {
+  margin-top: 79px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    margin-top: 161px;
+    margin-bottom: 83px;
+    padding-inline: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 149px;
+    margin-bottom: 90px;
+    padding: 0;
+  }
+}
+
+.promo-card__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
+}
+
+.promo-card__text {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $second-text-color;
+
+  @media (min-width: $tablet) {
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.promo-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $second-text-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 40px;
+}
