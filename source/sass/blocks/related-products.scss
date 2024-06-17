@@ -6,14 +6,14 @@
   align-items: center;
   justify-content: center;
   color: $main-text-color;
-  font-family: "Oswald-regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
 
   @media (min-width: $tablet) {
     width: $tablet;
     margin-top: 10px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: $desktop;
     margin-top: 15px;
     margin-bottom: 87px;
@@ -29,7 +29,7 @@
     padding: 0 30px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: $desktop;
     padding: 0;
   }
@@ -67,6 +67,7 @@
 
   @media (min-width: $tablet) {
     position: relative;
+    margin-top: 2px;
     margin-left: 40px;
     margin-bottom: 81px;
     font-size: 36px;
@@ -85,7 +86,7 @@
   }
 
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin: 0 0 78px 0;
     font-size: 36px;
     line-height: 36px;
@@ -94,7 +95,7 @@
 }
 
 .related-products__content {
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
   }
@@ -109,7 +110,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 100%;
     margin-right: 80px;
   }
@@ -117,16 +118,16 @@
 
 .related-products__item {
   border-top: 1px solid #ebebeb;
-  padding: 14px 0 18px;
+  padding: 13px 0 19px;
 
   @media (min-width: $tablet) {
-    padding: 26px 40px 27px 40px;
+    padding: 25px 40px 29px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 244px;
     padding: 15px 0 16px 0;
@@ -153,7 +154,7 @@
     line-height: 20px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin: auto auto auto 0;
   }
 }
@@ -174,7 +175,7 @@
     line-height: 20px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 50px;
     margin-bottom: 0;
@@ -189,7 +190,7 @@
     margin-top: 3px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin: auto 0;
   }
 }
@@ -200,7 +201,7 @@
     margin-top: 1px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin: auto 0;
   }
 }
@@ -218,9 +219,11 @@
     width: 100%;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin-left: auto;
     width: 244px;
+    height: auto;
+    padding: 8px;
   }
 }
 
@@ -234,8 +237,7 @@
   margin-bottom: 35px;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../../img/catalog_gift_background_img@2x.jpg");
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img@2x.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% 288px;
@@ -250,18 +252,21 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../../img/catalog_gift_background_img_tablet@2x.jpg") no-repeat;
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img_tablet@2x.jpg") no-repeat;
       background-size: 100% auto;
     }
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 245px;
     height: 288px;
     margin: 0;
     background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img.jpg") no-repeat;
     background-position: right top;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog_gift_background_img@2x.jpg");
+    }
   }
 }
 
@@ -278,14 +283,15 @@
     left: 77px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     left: 85px;
     top: 57px;
   }
 }
 
 .related-products__gift-block-title {
-  padding: 170px 55px 0 55px;
+  padding: 188px 55px 0 55px;
+  margin: 0;
   text-align: center;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
@@ -301,7 +307,7 @@
     margin: 70px 125px 70px auto;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     text-align: center;
     margin: auto 42px 40px 42px;
   }

@@ -1,32 +1,5 @@
-.form-request {
-  display: flex;
-  flex-direction: column;
-  width: $mobile;
-  margin: 0 auto;
-  padding: 0 0 32px 0;
-  font-family: "Oswald-regular", "Arial", sans-serif;
-  text-transform: uppercase;
-  color: $second-text-color;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-
-  @media (min-width: $tablet) {
-    width: $tablet;
-    margin-top: 66px;
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 60px;
-  }
-
-  @media (min-width: $desktop) {
-    width: $desktop;
-    padding: 0;
-  }
-}
-
 .eat-programme {
- border: none;
+  border: none;
 }
 
 //Стили формы по коту
@@ -36,7 +9,7 @@
     margin: 0 40px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     display: flex;
     margin: 0;
     gap: 80px;
@@ -55,7 +28,7 @@
     padding: 0 30px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 570px;
     padding: 0;
     margin: 0;
@@ -73,7 +46,7 @@
 .eat-programme__item:last-child {
   margin-bottom: 24px;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }
@@ -96,12 +69,22 @@
   padding: 0 50px 0 15px;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
-  font-family: "Oswald-regular", "Arial", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $second-text-color;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  /* stylelint-disable */
+  -moz-appearance: textfield; /* Для Firefox */
+  appearance: textfield; /* Для остальных браузеров */
+
+  /* Убираем стрелки для спин-батареек в WebKit */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -110,7 +93,7 @@
     padding: 0 50px 0 20px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     height: 52px;
   }
 }
@@ -143,7 +126,7 @@
     padding: 22px 25px 26px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     width: 570px;
     margin: 0;
     padding: 0;
@@ -161,7 +144,7 @@
     height: 40px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $desktop-width) {
     margin-left: 27px;
   }
 }
@@ -216,6 +199,6 @@
   border-color: #bababa;
 }
 
-.eat-programme__radio-label:disabled {
+.eat-programme__radio-input:disabled + .eat-programme__radio-text {
   opacity: 0.3;
 }

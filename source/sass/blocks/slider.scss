@@ -1,0 +1,105 @@
+.slider {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .slider__image-wrapper {
+    width: 280px;
+    position: relative;
+    display: flex;
+  
+    @media (min-width: $tablet) {
+      width: 560px;
+    }
+  
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      left: 65px;
+      bottom: 14px;
+    }
+  }
+  
+  .slider__fat-cat {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    height: 256px;
+    object-fit: cover;
+    overflow: hidden;
+  
+    @media (min-width: $tablet) {
+      height: 512px;
+    }
+  }
+  
+  .slider__slim-cat {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 256px;
+    object-fit: cover;
+    overflow: hidden;
+  
+    @media (min-width: $tablet) {
+      height: 512px;
+    }
+  }
+  
+  .slider__image {
+    max-width: inherit;
+    width: 280px;
+    height: auto;
+  
+    @media (min-width: $tablet) {
+      width: 560px;
+    }
+  }
+  
+  // это должна быть кнопка
+  .slider__button {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background-color: $button-slider-color;
+    border-radius: 2px;
+  
+    &::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background: url("../../img/slider.svg");
+    }
+  }
+  
+  .slider__button:hover,
+  .slider__button:focus {
+    outline: none;
+    background-color: $button-slider-hover-color;
+  }
+  
+  .slider__button:hover::before,
+  .slider__button:focus::before {
+    background: url("../../img/slider_hover.svg");
+  }
+  
+  .slider__button:active {
+    outline: none;
+    background-color: $button-slider-active-color;
+    opacity: 0.7;
+  }
+  
+  .slider__button:active::before {
+    background: url("../../img/slider_active.svg");
+  }
+  

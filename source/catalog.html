@@ -9,6 +9,8 @@
     <link type="image/png" href="./favicon/favicon_16x16.png" rel="icon" sizes="16x16">
     <link href="./favicon/apple_touch_icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="./favicon.ico" rel="icon">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body class="catalog-body">
@@ -16,34 +18,32 @@
     <div class="header__wrapper">
       <a class="header__logo logo" href="index.html">
         <picture>
-          <source media="(min-width: 1220px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
+          <source media="(min-width: 1440px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
           <source media="(min-width: 768px)" srcset="./img/logo/logo_header_tablet.svg" width="174" height="50">
           <img src="./img/logo/logo_header_mobile.svg" width="190" height="38" loading="lazy" alt="Логотип CAT ENERGY">
         </picture>
       </a>
       <!-- для скрытия меню нужно заменить nav--open на nav--close и наоборот -->
-      <nav class="nav nav--open nav--nojs">
-        <button class="burger" type="button">
+      <nav class="nav nav--close nav--nojs">
+        <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+
         <div class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link catalog-body__nav-link" href="index.html">
-                  Главная
+              <a class="nav__link nav__link--catalog" href="index.html">
+                Главная
               </a>
             </li>
             <li class="nav__item nav__item--current">
-              <a class="nav__link catalog-body__nav-link" href="catalog.html">
-                  Каталог продукции
+              <a class="nav__link nav__link--catalog" href="catalog.html">
+                Каталог продукции
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link catalog-body__nav-link" href="form.html">
-                  Подбор программы
+              <a class="nav__link nav__link--catalog" href="form.html">
+                Подбор программы
               </a>
             </li>
           </ul>
@@ -51,7 +51,7 @@
       </nav>
     </div>
   </header>
-  <main class="catalog-body__catalog-page catalog-page base_page">
+  <main class="catalog-body__catalog-page catalog-page base-page">
     <section class="catalog-page__catalog catalog">
       <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог продукции</h1>
@@ -95,10 +95,10 @@
               <div class="card__content">
                 <a class="card__img-link" href="#">
                   <picture class="card__img-wrapper">
-                    <source type="image/webp" media="(min-width: 1220px)" srcset="./img/catalog/chiken_pro_1000_desktop.webp 1x, ./img/catalog/chiken_pro_1000_desktop@2x.webp 2x" width="172" height="169">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/catalog/chiken_pro_1000_desktop.webp 1x, ./img/catalog/chiken_pro_1000_desktop@2x.webp 2x" width="172" height="169">
                     <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/chiken_pro_1000_tablet.webp 1x, ./img/catalog/chiken_pro_1000_tablet@2x.webp 2x" width="168" height="206">
                     <source type="image/webp" srcset="./img/catalog/chiken_pro_1000.webp 1x, ./img/catalog/chiken_pro_1000@2x.webp 2x" width="84" height="100">
-                    <source media="(min-width: 1220px)" srcset="./img/catalog/chiken_pro_1000_desktop.png 1x, ./img/catalog/chiken_pro_1000_desktop2x.png 2x" width="172" height="169">
+                    <source media="(min-width: 1440px)" srcset="./img/catalog/chiken_pro_1000_desktop.png 1x, ./img/catalog/chiken_pro_1000_desktop2x.png 2x" width="172" height="169">
                     <source media="(min-width: 768px)" srcset="./img/catalog/chiken_pro_1000_tablet.png 1x, ./img/catalog/chiken_pro_1000_tablet@2x.png 2x" width="168" height="206">
                     <img src="./img/catalog/chiken_pro_1000.png" alt="CAT ENERGY PRO CHICKEN 1000 г." srcset="./img/catalog/chiken_pro_1000@2x.png 2x" width="84" height="100">
                   </picture>
@@ -165,10 +165,10 @@
               <div class="card__content">
                 <a class="card__img-link" href="#">
                   <picture class="card__img-wrapper">
-                    <source type="image/webp" media="(min-width: 1220px)" srcset="./img/catalog/fish_pro_1000_desktop.webp 1x, ./img/catalog/fish_pro_1000_desktop@2x.webp 2x" width="172" height="196">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/catalog/fish_pro_1000_desktop.webp 1x, ./img/catalog/fish_pro_1000_desktop@2x.webp 2x" width="172" height="196">
                     <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/fish_pro_1000_tablet.webp 1x, ./img/catalog/fish_pro_1000_tablet@2x.webp 2x" width="168" height="200">
                     <source type="image/webp" srcset="./img/catalog/fish_pro_1000.webp 1x, ./img/catalog/fish_pro_1000@2x.webp 2x" width="84" height="100">
-                    <source media="(min-width: 1220px)" srcset="./img/catalog/fish_pro_1000_desktop.png 1x, ./img/catalog/fish_pro_1000_desktop@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 1440px)" srcset="./img/catalog/fish_pro_1000_desktop.png 1x, ./img/catalog/fish_pro_1000_desktop@2x.png 2x" width="172" height="196">
                     <source media="(min-width: 768px)" srcset="./img/catalog/fish_pro_1000_tablet.png 1x, ./img/catalog/fish_pro_1000_tablet@2x.png 2x" width="168" height="200">
                     <img src="./img/catalog/fish_pro_1000.png" alt="CAT ENERGY PRO FISH 1000 г." srcset="./img/catalog/fish_pro_1000@2x.png 2x" width="84" height="100">
                   </picture>
@@ -235,10 +235,10 @@
               <div class="card__content">
                 <a class="card__img-link" href="#">
                   <picture class="card__img-wrapper">
-                    <source type="image/webp" media="(min-width: 1220px)" srcset="./img/catalog/grain_slim_1000_desktop.webp 1x, ./img/catalog/grain_slim_1000_desktop@2x.webp 2x" width="172" height="196">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/catalog/grain_slim_1000_desktop.webp 1x, ./img/catalog/grain_slim_1000_desktop@2x.webp 2x" width="172" height="196">
                     <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/grain_slim_1000_tablet.webp 1x, ./img/catalog/grain_slim_1000_tablet@2x.webp 2x" width="168" height="200">
                     <source type="image/webp" srcset="./img/catalog/grain_slim_1000.webp 1x, ./img/catalog/grain_slim_1000@2x.webp 2x" width="84" height="100">
-                    <source media="(min-width: 1220px)" srcset="./img/catalog/grain_slim_1000_desktop.png 1x, ./img/catalog/grain_slim_1000_desktop@2x.png 2x" width="172" height="196">
+                    <source media="(min-width: 1440px)" srcset="./img/catalog/grain_slim_1000_desktop.png 1x, ./img/catalog/grain_slim_1000_desktop@2x.png 2x" width="172" height="196">
                     <source media="(min-width: 768px)" srcset="./img/catalog/grain_slim_1000_tablet.png 1x, ./img/catalog/grain_slim_1000_tablet@2x.png 2x" width="168" height="200">
                     <img src="./img/catalog/grain_slim_1000.png" alt="CAT ENERGY SLIM GRAIN 1000 г." srcset="./img/catalog/grain_slim_1000@2x.png 2x" width="84" height="100">
                   </picture>
@@ -300,21 +300,19 @@
               <a class="card__link button" href="form.html">Заказать</a>
             </div>
           </li>
-          <li class="catalog__item promo-card__item">
-            <div class="promo-card">
-              <div class="promo-card__wrapper">
-                <div class="promo-card__content">
-                  <h3 class="promo-card__title">Показать еще 100500 товаров</h3>
-                  <span class="promo-card__text">На самом деле вкусов гораздо больше!</span>
-                </div>
-                <a class="promo-card__link button-alternative" href="#">Показать все</a>
+          <li class="catalog__promo-card promo-card">
+            <div class="promo-card__wrapper">
+              <div class="promo-card__content">
+                <h3 class="promo-card__title">Показать еще 100500 товаров</h3>
+                <span class="promo-card__text">На самом деле вкусов гораздо больше!</span>
               </div>
+              <a class="promo-card__link button-alternative" href="#">Показать все</a>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    <section class="catalog-content__related-products related-products">
+    <section class="catalog-page__related-products related-products">
       <div class="related-products__wrapper">
         <h2 class="related-products__title">Дополнительные товары</h2>
         <div class="related-products__content">
@@ -363,16 +361,16 @@
         </div>
       </div>
     </section>
-    <section class="catalog-content__map map map--color">
+    <section class="catalog-page__map map map--color">
       <h2 class="visually-hidden">Приглашаем к сотрудничеству дилеров!</h2>
       <div class="map__wrapper">
-        <div class="map__cooperation">
-          <h2 class="map__cooperation-text">приглашаем<br> к сотрудничеству дилеров!</h2>
-          <div class="map__cooperation-wrapper">
-            <address class="map__cooperation-address">
-              ул.Большая
-              Конюшенная,д. 19/8
-              <span class="city">Санкт-Петербург</span>
+        <div class="map__cooperation cooperation">
+          <h2 class="cooperation__text">приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="cooperation__wrapper">
+            <address class="cooperation__address">
+              ул. Большая
+              Конюшенная, д. 19/8
+              <span class="cooperation__city">Санкт-Петербург</span>
             </address>
           </div>
         </div>
@@ -382,7 +380,7 @@
       </div>
     </section>
   </main>
-  <footer class="catalog-content__footer footer">
+  <footer class="catalog-body__footer footer">
     <div class="footer__wrapper">
       <div class="footer__wrapper-logo">
         <a class="footer__logo logo" href="#">

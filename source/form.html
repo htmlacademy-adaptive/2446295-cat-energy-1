@@ -10,40 +10,41 @@
     <link href="./favicon/apple_touch_icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="./favicon.ico" rel="icon">
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body class="form-body">
   <header class="form-body__header header">
     <div class="header__wrapper">
       <a class="header__logo logo" href="index.html">
         <picture>
-          <source media="(min-width: 1220px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
+          <source media="(min-width: 1440px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
           <source media="(min-width: 768px)" srcset="./img/logo/logo_header_tablet.svg" width="174" height="50">
           <img src="./img/logo/logo_header_mobile.svg" width="190" height="38" loading="lazy" alt="Логотип CAT ENERGY">
         </picture>
       </a>
       <!-- для скрытия меню нужно заменить nav--open на nav--close и наоборот -->
-      <nav class="nav nav--open nav--nojs">
-        <button class="burger" type="button">
+      <nav class="nav nav--close nav--nojs">
+        <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+
         <div class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link form-body__nav-link" href="index.html">
-                  Главная
+              <a class="nav__link nav__link--form" href="index.html">
+                Главная
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link form-body__nav-link" href="catalog.html">
-                  Каталог продукции
+              <a class="nav__link nav__link--form" href="catalog.html">
+                Каталог продукции
               </a>
             </li>
             <li class="nav__item nav__item--current">
-              <a class="nav__link form-body__nav-link" href="form.html">
-                  Подбор программы
+              <a class="nav__link nav__link--form" href="form.html">
+                Подбор программы
               </a>
             </li>
           </ul>
@@ -51,7 +52,7 @@
       </nav>
     </div>
   </header>
-  <main class="form-body__form-page form-page base_page">
+  <main class="form-body__form-page form-page base-page">
     <section class="form-page__tittle-case">
       <div class="form-page__tittle-wrapper">
         <h1 class="form-page-tittle">Подбор программы</h1>
@@ -61,7 +62,7 @@
         </p>
       </div>
     </section>
-    <form class="form-request" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form-page__form-request form-request" action="https://echo.htmlacademy.ru/" method="post">
       <fieldset class="eat-programme">
         <legend class="visually-hidden">Данные кота</legend>
         <div class="eat-programme__wrapper">
@@ -110,16 +111,16 @@
       <section class="contacts">
         <h3 class="visually-hidden">Контактные данные (владельца кота)</h3>
         <div class="contacts__wrapper">
-          <fieldset class="contacts__fieldset form-fieldset">
-            <legend class="contacts__legend fieldset-legend">Контактные данные (владельца кота)</legend>
+          <fieldset class="contacts__fieldset fieldset">
+            <legend class="contacts__legend">Контактные данные (владельца кота)</legend>
             <ul class="contacts__input-list">
-              <li class="contact__input-email-item contacts-item">
+              <li class="contact__input-email-item contact">
                 <label class="contact__input-label contact__input-label--email">
                   <span class="contact__input-text">E-mail:*</span>
                   <input class="contact__input contact__input--email" type="email" name="client-email" placeholder="Kuklachev@gmail.com" required>
                 </label>
               </li>
-              <li class="contact__input-phone-item contacts-item">
+              <li class="contact__input-phone-item contact">
                 <label class="contact__input-label contact__input-label--phone">
                   <span class="contact__input-text">Телефон:*</span>
                   <input class="contact__input contact__input--phone" type="tel" name="client-phone" placeholder="8 (960) 900-60-90" required>
@@ -132,7 +133,7 @@
       <section class="comment">
         <h3 class="visually-hidden">Напишите комментарий к заказу</h3>
         <div class="comment__wrapper">
-          <fieldset class="comment__fieldset form-fieldset">
+          <fieldset class="comment__fieldset fieldset">
             <legend class="comment__legend fieldset-legend">Комментарий</legend>
             <textarea class="comment__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
@@ -141,7 +142,7 @@
       <section class="extras">
         <div class="extras__wrapper">
           <h3 class="visually-hidden">Выберите дополнительные товары</h3>
-          <fieldset class="extras__fieldset form-fieldset">
+          <fieldset class="extras__fieldset fieldset">
             <legend class="extras__legend fieldset-legend">Дополнительно</legend>
             <ul class="extras__list">
               <li class="extras__item">
@@ -179,16 +180,16 @@
         </div>
       </div>
     </form>
-    <section class="map map--color">
+    <section class="form-page__map map map--color">
       <h2 class="visually-hidden">Приглашаем к сотрудничеству дилеров!</h2>
       <div class="map__wrapper">
-        <div class="map__cooperation">
-          <h2 class="map__cooperation-text">приглашаем<br> к сотрудничеству дилеров!</h2>
-          <div class="map__cooperation-wrapper">
-            <address class="map__cooperation-address">
+        <div class="map__cooperation cooperation">
+          <h2 class="cooperation__text">приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="cooperation__wrapper">
+            <address class="cooperation__address">
               ул. Большая
               Конюшенная, д. 19/8
-              <span class="city">Санкт-Петербург</span>
+              <span class="cooperation__city">Санкт-Петербург</span>
             </address>
           </div>
         </div>
@@ -198,7 +199,7 @@
       </div>
     </section>
   </main>
-  <footer class="catalog-content__footer footer">
+  <footer class="form-body__footer footer">
     <div class="footer__wrapper">
       <div class="footer__wrapper-logo">
         <a class="footer__logo logo" href="#">

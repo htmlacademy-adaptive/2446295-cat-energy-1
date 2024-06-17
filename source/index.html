@@ -9,6 +9,8 @@
   <link type="image/png" href="./favicon/favicon_16x16.png" rel="icon" sizes="16x16">
   <link href="./favicon/apple_touch_icon.png" rel="apple-touch-icon" sizes="180x180">
   <link href="./favicon.ico" rel="icon">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body class="index-body">
@@ -16,34 +18,32 @@
     <div class="header__wrapper">
       <a class="header__logo logo" href="index.html">
         <picture>
-          <source media="(min-width: 1220px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
+          <source media="(min-width: 1440px)" srcset="./img/logo/logo_header_desktop.svg" width="202" height="59">
           <source media="(min-width: 768px)" srcset="./img/logo/logo_header_tablet.svg" width="174" height="50">
           <img src="./img/logo/logo_header_mobile.svg" width="190" height="38" loading="lazy" alt="Логотип CAT ENERGY">
         </picture>
       </a>
       <!-- для скрытия меню нужно заменить nav--open на nav--close и наоборот -->
-      <nav class="nav nav--close nav--nojs">
-        <button class="burger" type="button">
+      <nav class="nav nav--open nav--nojs">
+        <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+
         <div class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
-              <a class="nav__link main-page__nav-link" href="index.html">
-                  Главная
+              <a class="nav__link nav__link--main" href="index.html">
+                Главная
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link main-page__nav-link" href="catalog.html">
-                  Каталог продукции
+              <a class="nav__link nav__link--main" href="catalog.html">
+                Каталог продукции
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link main-page__nav-link" href="form.html">
-                  Подбор программы
+              <a class="nav__link nav__link--main" href="form.html">
+                Подбор программы
               </a>
             </li>
           </ul>
@@ -52,7 +52,7 @@
     </div>
   </header>
 
-  <main class="index-body__main-content main-content base_page">
+  <main class="index-body__main-content main-content base-page">
     <section class="main-content__promo promo">
       <div class="promo__wrapper">
         <div class="promo__offer">
@@ -60,43 +60,43 @@
           <p class="promo__text">Занялся собой? Займись котом!</p>
         </div>
         <div class="promo__picture">
-            <picture>
-              <source type="image/webp" media="(min-width: 1220px)" srcset="./img/promo_img_desktop.webp 1x, ./img/promo_img_desktop@2x.webp 2x" width="552" height="499">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/promo_img_tablet.webp 1x, ./img/promo_img_tablet@2x.webp 2x" width="709" height="609">
-              <source type="image/webp" srcset="./img/promo_img_mobile.webp 1x, ./img/promo_img_mobile@2x.webp 2x" width="280" height="270">
-              <source media="(min-width: 1220px)" srcset="img/promo_img_desktop.png 1x, img/promo_img_desktop@2x.png 2x" width="552" height="499">
-              <source media="(min-width: 768px)" srcset="img/promo_img_tablet.png 1x, img/promo_img_tablet@2x.png 2x" width="709" height="609">
-              <img src="./img/promo_img_mobile.png" alt="CAT ENERGY функциональное питание для котов" srcset="img/promo_img_mobile@2x.png 2x" width="280" height="270">
-            </picture>
-          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="./img/promo_img_desktop.webp 1x, ./img/promo_img_desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/promo_img_tablet.webp 1x, ./img/promo_img_tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="./img/promo_img_mobile.webp 1x, ./img/promo_img_mobile@2x.webp 2x" width="280" height="270">
+            <source media="(min-width: 1440px)" srcset="img/promo_img_desktop.png 1x, img/promo_img_desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="img/promo_img_tablet.png 1x, img/promo_img_tablet@2x.png 2x" width="709" height="609">
+            <img src="./img/promo_img_mobile.png" alt="CAT ENERGY функциональное питание для котов" srcset="img/promo_img_mobile@2x.png 2x" width="280" height="270">
+          </picture>
+        </div>
         <a class="promo__link button" href="form.html">Подобрать программу</a>
       </div>
     </section>
     <section class="main-content__programmes programmes">
       <h2 class="visually-hidden">Программы питания!</h2>
       <div class="programmes__wrapper">
-          <div class="programmes__card programmes__card--fit">
-              <h2 class="programmes__title">похудение</h2>
-              <p class="programmes__text">
-                  Ваш кот весит больше собаки и почти утратил способность
-                  лазить по деревьям? Пора на диету! Cat Energy Slim поможет
-                  вашему питомцу сбросить лишний вес.
-              </p>
-              <a class="programmes__link" href="catalog.html">
-                  каталог slim
-              </a>
-          </div>
-          <div class="programmes__card programmes__card--mass">
-              <h2 class="programmes__title">набор массы</h2>
-              <p class="programmes__text">
-                  Заработать авторитет среди дворовых котов и даже собак?
-                  Серия Cat Energy Pro поможет вашему коту нарастить
-                  необходимые мышцы!
-              </p>
-              <a class="programmes__link" href="catalog.html">
-                  каталог pro
-              </a>
-          </div>
+        <div class="programmes__card programmes__card--fit">
+          <h2 class="programmes__title">похудение</h2>
+          <p class="programmes__text">
+            Ваш кот весит больше собаки и почти утратил способность
+            лазить по деревьям? Пора на диету! Cat Energy Slim поможет
+            вашему питомцу сбросить лишний вес.
+          </p>
+          <a class="programmes__link" href="catalog.html">
+            каталог slim
+          </a>
+        </div>
+        <div class="programmes__card programmes__card--mass">
+          <h2 class="programmes__title">набор массы</h2>
+          <p class="programmes__text">
+            Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить
+            необходимые мышцы!
+          </p>
+          <a class="programmes__link" href="catalog.html">
+            каталог pro
+          </a>
+        </div>
       </div>
     </section>
     <section class="main-content__advantages advantages">
@@ -178,33 +178,41 @@
               </picture>
             </div>
             <button class="slider__button" type="button">
-                <span class="visually-hidden">Изменить размеры кота</span>
+              <span class="visually-hidden">Изменить размеры кота</span>
             </button>
           </div>
-
         </div>
       </div>
     </section>
     <section class="main-content__map map">
       <h2 class="visually-hidden">Приглашаем к сотрудничеству дилеров!</h2>
       <div class="map__wrapper">
-        <div class="map__cooperation">
-          <h2 class="map__cooperation-text">приглашаем<br> к сотрудничеству дилеров!</h2>
-          <div class="map__cooperation-wrapper">
-            <address class="map__cooperation-address">
+        <div class="map__cooperation cooperation">
+          <h2 class="cooperation__text">приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="cooperation__wrapper">
+            <address class="cooperation__address">
               ул. Большая
               Конюшенная, д. 19/8
-              <span class="city">Санкт-Петербург</span>
+              <span class="cooperation__city">Санкт-Петербург</span>
             </address>
           </div>
         </div>
         <div class="map__iframe-wrapper">
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15981.70688246821!2d30.29958576632206!3d59.953489638337786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1714468580987!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="наб. Pеки Карповки, 5П, Санкт-Петербург, 197022"></iframe>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/location_desktop@1x.webp 1x, img/location_desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/location_tablet@1x.webp 1x, img/location_tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="images/location_mobile@1x.webp 1x, images/location_mobile@2x.webp 2x">
+
+            <source type="image/png" media="(min-width: 1440px)" srcset="img/location_desktop@1x.png 1x, img/location_desktop@2x.png 2x" width="1440" height="400">
+            <source type="image/png" media="(min-width: 768px)" srcset="img/location_tablet@1x.png 1x, img/location_tablet@2x.png 2x" width="768" height="400">
+            <img class="map__img" src="img/location_mobile@1x.png" srcset="img/location_mobile@2x.png 2x" width="320" height="362" alt="Карта">
+          </picture>
         </div>
       </div>
     </section>
   </main>
-  <footer class="main-page__footer footer">
+  <footer class="index-body__footer footer">
     <div class="footer__wrapper">
       <div class="footer__wrapper-logo">
         <a class="footer__logo logo" href="#">

@@ -1,0 +1,117 @@
+.contact:last-child {
+  margin-bottom: 0;
+}
+
+.contact__input-label {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $third-background-color;
+    mask: url("../../img/email_stroke.svg") no-repeat center;
+    height: 20px;
+    width: 20px;
+    top: 13px;
+    right: 12px;
+
+    @media (min-width: $tablet) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &--email::after {
+    mask: url("../../img/email_stroke.svg") no-repeat center;
+  }
+
+  &--phone::after {
+    mask: url("../../img/phone_stroke.svg") no-repeat center;
+  }
+
+  &:focus-within::after {
+    background-color: $main-color;
+  }
+
+  &.error {
+    &::after {
+      background-color: $border-input-error-color;
+    }
+
+    .contact__input {
+      border-color: $border-input-error-color;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.contact__input-label {
+  display: flex;
+  align-items: center;
+}
+
+.contact__input-text {
+  display: block;
+  margin: auto 13px auto 0;
+  flex: 0 0 auto;
+}
+
+.contact__input {
+  height: 45px;
+  width: 100%;
+  padding: 0 30px 0 15px;
+  border: 1px solid $border-input-color;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $second-text-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    height: 55px;
+    padding: 0 30px 0 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+//Стилит при взаимодействии для Input
+
+.contact__input-label:hover .contact__input {
+  border: 1px solid $border-input-hover-color;
+}
+
+.contact__input-labell:focus .contact__input {
+  border: 2px solid $border-input-focus-color;
+}
+
+.contact__input-label:invalid .contact__input {
+  border: 2px solid $border-input-error-color;
+}
+
+.contact__input-label:focus::after {
+  background-color: $main-color;
+}
+
+.contact__input-label:invalid::after {
+  background-color: $border-input-error-color;
+}
