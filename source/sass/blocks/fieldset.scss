@@ -31,6 +31,10 @@
     margin-top: 65px;
     padding: 74px 70px 0 70px;
 
+    &::after {
+      top: -14px;
+    }
+
     &::before {
       left: 30px;
       width: 591px;
